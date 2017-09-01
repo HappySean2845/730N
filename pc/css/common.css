@@ -16,6 +16,32 @@ body .pc.container .context .content{
     width:1024px;
     margin:0 auto;
 }
+#part_4 .title{
+    position:relative;
+    top: -41px;
+    margin-left:55px;
+}
+#part_4{
+    height:431px;
+    background-image: url("../images/part_4_bg_02.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#part_3{
+    height:430px;
+    background-image: url("../images/part_3_bg_14.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#part_3 .btn{
+    text-align: center;
+    margin-top:220px;
+}
+#part_3 .title{
+    position:relative;
+    top: -41px;
+    margin-left:55px;
+}
 #part_2{
     height: 546px;
     background: none;
@@ -36,7 +62,7 @@ body .pc.container .context .content{
     width:512px;
 }
 #part_2 .rightForm input,select{
-    width: 204px;
+    width: 184px;
     height:36px;
     line-height: 36px;
     border: 1px solid #8f8f8f;
@@ -44,6 +70,17 @@ body .pc.container .context .content{
     -webkit-border-radius:4px;
     -moz-border-radius:4px;
     border-radius:4px;
+    font-weight:bold;
+    padding-left:10px;
+    background: #ffffff;
+}
+#part_2 .rightForm select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background-image: url("../images/selectBg_03.png");
+    background-position: right center;
+    background-repeat: no-repeat;
 }
 #part_1{
     height: 587px;
