@@ -16,6 +16,9 @@ body .pc.container .context .content{
     width:1024px;
     margin:0 auto;
 }
+#part_4 .text{
+    width:460px;
+}
 #part_4 .title{
     position:relative;
     top: -41px;
