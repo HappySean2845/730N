@@ -1,0 +1,27 @@
+{
+  "name": "730N",
+  "homepage": "https://github.com/sThReal/730N",
+  "authors": [
+    "jiangjie404 <404877757@qq.com>"
+  ],
+  "description": "730的N种可能",
+  "main": "",
+  "keywords": [
+    "730",
+    "宝骏"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.8.3",
+    "jquery2": "^2.0.0",
+    "mui": "^0.9.24"
+  }
+}
