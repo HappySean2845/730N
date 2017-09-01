@@ -2,6 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f6a2e55-f843-4c66-b7aa-f7d587012769" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/carousel/gaugin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/carousel/giotto.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/carousel/leonardo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/carousel/warhol.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/minimap/ermine.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/parallax/galaxies1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/parallax/galaxies2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/parallax/stars.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/.nodemonignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/RELEASENOTES.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/build/iscroll-infinite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/build/iscroll-lite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/build/iscroll-probe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/build/iscroll-zoom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/build/iscroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/2d-scroll/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/barebone/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/bounce-easing/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/carousel/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/click/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/demoUtils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/event-passthrough/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/forms/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/horizontal/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/infinite/dataset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/infinite/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/key-bindings/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/minimap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/no-transition/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/parallax/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/probe/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/scroll-to-element/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/scrollbars/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/simple/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/snap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/styled-scrollbars/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/tap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/demos/zoom/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/close.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/default/_animate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/default/handleEvent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/indicator/_initIndicators.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/indicator/_transitionTime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/indicator/_transitionTimingFunction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/indicator/_translate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/indicator/build.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/indicator/indicator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/infinite/build.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/infinite/infinite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/infinite/refresh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/keys/build.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/open.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/probe/_animate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/probe/_move.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/probe/build.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/probe/indicator._move.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/probe/probe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/snap/_end.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/snap/build.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/snap/refresh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/snap/snap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/wheel/build.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/wheel/wheel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/zoom/build.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/zoom/handleEvent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/zoom/refresh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/iscroll-master/src/zoom/zoom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/swiper-3.4.2.jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc/index.html" afterPath="$PROJECT_DIR$/pc/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,41 +98,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pc/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readme.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wap/css/common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc/css/common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="520">
+              <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -90,10 +138,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="836" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -132,28 +179,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="730N" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="730N" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,16 +204,36 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="C:\Users\jiangjie\Desktop\730N\lib" />
       <recent name="C:\Users\jiangjie\Desktop\730N\pc\css" />
       <recent name="C:\Users\jiangjie\Desktop\730N\wap" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
@@ -251,32 +304,32 @@
       <workItem from="1504166645815" duration="3088000" />
       <workItem from="1504171247076" duration="4000" />
       <workItem from="1504181764442" duration="1646000" />
+      <workItem from="1504189130242" duration="437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5376000" />
+    <option name="totallyTimeSpent" value="5813000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="836" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2410148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +345,38 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pc/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wap/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -302,7 +387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1215" lean-forward="false" selection-start-line="0" selection-start-column="1215" selection-end-line="0" selection-end-column="1215" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -334,7 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1215" lean-forward="false" selection-start-line="0" selection-start-column="1215" selection-end-line="0" selection-end-column="1215" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -376,6 +459,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/layer/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1803">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clean.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1122" lean-forward="false" selection-start-line="0" selection-start-column="1122" selection-end-line="0" selection-end-column="1122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pc/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -392,39 +500,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/layer/layer.js">
+    <entry file="file://$PROJECT_DIR$/lib/iscroll-master/src/keys/keys.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1803">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1490373612760" expanded="true" signature="3352:3505" ph="..." />
-            <marker date="1490373612760" expanded="true" signature="3773:3860" ph="..." />
-            <marker date="1490373612760" expanded="true" signature="20506:20525" ph="..." />
-          </folding>
+        <state relative-caret-position="-1764">
+          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clean.css">
+    <entry file="file://$PROJECT_DIR$/lib/swiper-3.4.2.jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1122" lean-forward="false" selection-start-line="0" selection-start-column="1122" selection-end-line="0" selection-end-column="1122" />
+        <state relative-caret-position="240">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pc/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="520">
+          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding />
         </state>
       </provider>
