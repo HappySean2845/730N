@@ -182,9 +182,10 @@
 
 
       $("#part_5 .nextBtn img").click(function () {
-        var index = miniSwiper.activeIndex - 1;
+//        alert("1")1
+        var index = miniSwiper.activeIndex + 1;
         index>1?index = 0:index = index;
-        swiper.slideTo(index)
+        miniSwiper.slideTo(index)
       })
 
 
