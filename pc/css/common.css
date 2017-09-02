@@ -16,8 +16,51 @@ body .pc.container .context .content{
     width:1024px;
     margin:0 auto;
 }
+#part_6{
+    height:720px;
+    background: none;
+}
+#part_6 .title{
+    width:289px;
+    height:96px;
+    margin:0 auto;
+    padding-top:61px;
+}
+#part_5{
+    height: 735px;
+    background-color: #f1f1f1;
+    background-image: url("../images/part_5_bg_07.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+#part_5 .title{
+    width:292px;
+    height: 87px;
+    margin:0 auto;
+    padding-top: 62px;
+}
+#part_4 .btn{
+    width:212px;
+    height:48px;
+    line-height:48px;
+    background: #c69c6d;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 4px;
+    margin-top: 32px;
+    margin-left: 120px;
+}
 #part_4 .text{
     width:460px;
+    color:#666666;
+    line-height: 26px;
+    font-size: 20px;
+    margin-left: 120px;
+}
+#part_4 .text p{
+    margin-top:10px;
 }
 #part_4 .title{
     position:relative;
@@ -63,9 +106,47 @@ body .pc.container .context .content{
 #part_2 .rightForm{
     float: right;
     width:512px;
+    margin-right:8px;
+    margin-top:45px;
 }
-#part_2 .rightForm input,select{
-    width: 184px;
+#part_2 .rightForm li{
+    float: left;
+    width:208px;
+    margin-bottom:16px;
+}
+#part_2 .rightForm li.checkMsg{
+    font-size:14px;
+    line-height:18px;
+    font-weight:bold;
+}
+#part_2 .rightForm li .btn{
+    width:108px;
+    height:38px;
+    color: #ffffff;
+    font-weight:bold;
+    text-align: center;
+    line-height:38px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #c38c64;
+    float: right;
+    margin-right:86px;
+}
+#part_2 .rightForm input[type='checkbox']{
+    /*vertical-align: -1px;*/
+    margin-top:-2px;
+    -webkit-appearance:none;
+    appearance:none;
+    width:18px;
+    height:18px;
+    background-image: url(../images/check_off_21.png);
+}
+#part_2 .rightForm input[type='checkbox']:checked{
+    background-image: url(../images/check_on_21.png);
+}
+#part_2 .rightForm input[type='text'],select,input[type='phone']{
+    width: 206px;
     height:36px;
     line-height: 36px;
     border: 1px solid #8f8f8f;
@@ -81,9 +162,12 @@ body .pc.container .context .content{
     appearance:none;
     -moz-appearance:none;
     -webkit-appearance:none;
-    background-image: url("../images/selectBg_03.png");
+    background-image: url("../images/selectBg_10.png");
     background-position: right center;
     background-repeat: no-repeat;
+}
+#part_2 .rightForm #delear{
+    width:424px;
 }
 #part_1{
     height: 587px;
