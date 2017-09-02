@@ -8,7 +8,9 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <script type="text/javascript" src="../bower_components/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/layer/layer.js"></script>
+    <script type="text/javascript" src="../lib/swiper-3.4.2.jquery.min.js"></script>
     <link rel="stylesheet" href="../clean.css">
+    <link rel="stylesheet" href="../lib/swiper.css">
     <link rel="stylesheet" href="css/common.css">
     <title>730的N种可能</title>
 </head>
@@ -75,18 +77,57 @@
             <div class="btn">立即抢购</div>
         </div>
     </div>
-    <div class="context part_5" id="part_5">
+    <div class="context part_6" id="part_6">
+        <div class="content">
+            <div class="title"><img src="images/part_6_title_03.png" alt=""></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/part_6_item_07.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/part_6_item_07.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/part_6_item_07.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="btn" style="margin-top: 30px;">
+                <img src="images/part_6_prev_10.png" alt="" class="prev">
+                <img src="images/part_6_next_11.png" alt="" class="next">
+            </div>
+        </div>
+    </div>
+    <div class="context part_5" id="part_5" style="overflow: hidden;">
         <div class="content">
             <div class="title">
                 <img src="images/part_5_title_03.png" alt="">
             </div>
+            <div class="descContent">
+                <div class="miniSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/part_5_item_45.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/part_5_item_45.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">
+                    <div><img src="images/part_5_desc_55.png" alt=""></div>
+                    <h2>1元给全新宝骏730的 <br>N种可能</h2>
+                    <p>要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案</p>
+                    <div class="nextBtn">
+                        <img src="images/part_6_next_11.png" alt="">
+                    </div>
+                </div>
+
+        </div>
         </div>
     </div>
-    <div class="context part_6" id="part_6">
-        <div class="content">
-            <div class="title"><img src="images/part_6_title_03.png" alt=""></div>
-        </div>
-    </div>
+
 </div>
 <script type="text/javascript" src="../public/province.js"></script>
 <script type="text/javascript" src="../public/city.js"></script>
@@ -97,6 +138,56 @@
 //        skin: 'demo-class'
         title:"提示"
       })
+
+      var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        initialSlide:1,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+          rotate: 0,
+          stretch: 0,
+          depth: 500,
+          modifier: 3,
+          slideShadows : true
+        }
+      });
+      var miniSwiper = new Swiper('.miniSwiper', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        initialSlide:1,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+          rotate: 0,
+          stretch: 0,
+          depth: 600,
+          modifier: 3,
+          slideShadows : false,
+        }
+      });
+      $("#part_6 .btn .next").click(function () {
+        var index = swiper.activeIndex + 1;
+        index>2?index = 0:index = index;
+        swiper.slideTo(index)
+      })
+      $("#part_6 .btn .prev").click(function () {
+        var index = swiper.activeIndex - 1;
+        index<0?index = 2:index = index;
+        swiper.slideTo(index)
+      })
+
+
+      $("#part_5 .nextBtn img").click(function () {
+        var index = miniSwiper.activeIndex - 1;
+        index>1?index = 0:index = index;
+        swiper.slideTo(index)
+      })
+
+
       function createPro() {
         $("#pro").empty();
         $("#pro").append('<option sid="-1">请选择</option>');

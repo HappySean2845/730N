@@ -16,6 +16,23 @@ body .pc.container .context .content{
     width:1024px;
     margin:0 auto;
 }
+#part_6 .prev{
+    float: left;
+    cursor: pointer;
+}
+#part_6 .next{
+    float: right;
+    cursor: pointer;
+}
+#part_6 .swiper-container{
+     height: 423px;
+     width:100%;
+    margin-top:100px;
+ }
+#part_6 .swiper-container .swiper-slide{
+    height: 423px;
+    width: 744px;
+}
 #part_6{
     height:720px;
     background: none;
@@ -25,6 +42,41 @@ body .pc.container .context .content{
     height:96px;
     margin:0 auto;
     padding-top:61px;
+}
+#part_5 .descContent{
+    width:100%;
+}
+#part_5 .descContent .desc{
+    width:430px;
+    float:left;
+    margin-top:136px;
+    /*margin-right:80px;*/
+}
+#part_5 .descContent .desc h2{
+    font-size:34px;
+    line-height:42px;
+    margin-top: 24px;
+    font-weight:normal;
+}
+#part_5 .descContent .desc p{
+    color: #6e6e6e;
+    line-height: 18px;
+    margin-top:36px;
+}
+#part_5 .descContent .nextBtn{
+    text-align: right;
+    padding-top:58px;
+    width: 398px;
+}
+#part_5 .descContent .miniSwiper{
+      width:430px;
+      height:346px;
+      float: left;
+    margin-left:92px;
+    margin-top:96px;
+}
+#part_5 .descContent .miniSwiper .swiper-slide{
+    height:346px;
 }
 #part_5{
     height: 735px;
