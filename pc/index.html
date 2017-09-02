@@ -74,7 +74,7 @@
                     &nbsp; &nbsp;前200名用户可获得50元话费
                 </p>
             </div>
-            <div class="btn">立即抢购</div>
+            <div class="btn goBuy">立即抢购</div>
         </div>
     </div>
     <div class="context part_6" id="part_6">
@@ -189,6 +189,10 @@
       })
 
 
+      $(".goBuy").click(function () {
+//        console.log($("#part_2"))
+        $(document).scrollTop(587,500)
+      })
       function createPro() {
         $("#pro").empty();
         $("#pro").append('<option sid="-1">请选择</option>');
