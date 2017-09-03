@@ -169,6 +169,40 @@
           slideShadows : false,
         }
       });
+
+
+      $(".miniSwiper .swiper-slide").click(function(){
+        var url = ""
+        if(miniSwiper.activeIndex == 0){
+          url = ""
+        }else if(miniSwiper.activeIndex == 1){
+          url = ""
+        }
+        window.open(url);
+      })
+
+      $(".swiper-container .swiper-slide").click(
+        function () {
+          var videoUrl = '';
+          if(swiper.activeIndex == 1){
+            videoUrl = 'https://v.qq.com/x/page/l0532d4s97h.html';
+          }else if(swiper.activeIndex == 2){
+            videoUrl = 'https://v.qq.com/x/page/k0532t6x5w0.html';
+          }else if(swiper.activeIndex == 0){
+            videoUrl = 'https://v.qq.com/x/page/v0532ifzplw.html';
+          }
+          layer.open({
+            type: 2,
+            title: false,
+            area: ['1000px', '680px'],
+            shade: 0.8,
+            closeBtn: 1,
+            shadeClose: true,
+            content: videoUrl,
+          });
+        }
+      )
+
       $("#part_6 .btn .next").click(function () {
         var index = swiper.activeIndex + 1;
         index>2?index = 0:index = index;
@@ -179,8 +213,6 @@
         index<0?index = 2:index = index;
         swiper.slideTo(index)
       })
-
-
       $("#part_5 .nextBtn img").click(function () {
 //        alert("1")1
         var index = miniSwiper.activeIndex + 1;
