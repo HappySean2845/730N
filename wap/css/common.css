@@ -1,5 +1,6 @@
 * li{
     list-style:none;
+
 }
 /**{*/
     /*font-size:0.24rem;*/
@@ -13,7 +14,10 @@
     overflow-y: scroll;
 }
 
-
+.layui-layer-demo .layui-layer-content{
+    padding:0.2rem;
+    font-size: 0.2rem;
+}
 #part_5 .descContent{
     width:100%;
 }

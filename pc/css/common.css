@@ -16,6 +16,9 @@ body .pc.container .context .content{
     width:1024px;
     margin:0 auto;
 }
+.layui-layer-demo .layui-layer-content{
+    padding:20px;
+}
 #part_6 .prev{
     float: left;
     cursor: pointer;
