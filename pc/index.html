@@ -126,16 +126,11 @@
            </div>
         </div>
     </div>
-   
-   
     <div class="context" id="part_bottom" style="overflow: hidden;">
         <div class="content">
             <img src="../public/part_bottom_02.jpg" alt="">
         </div>
     </div>
-
-
-
 </div>
 <script type="text/javascript" src="../public/md5.js"></script>
 <script type="text/javascript" src="../public/province.js"></script>
@@ -191,6 +186,15 @@
           slideShadows : false,
         }
       });
+      $("#bottomTitle").click(function () {
+        var url = ""
+        if(miniSwiper.activeIndex == 0){
+          url = "http://www.xincheping.com/driveart/245751.html"
+        }else if(miniSwiper.activeIndex == 1){
+          url = "http://www.sohu.com/a/155689525_110617"
+        }
+        window.open(url);
+      })
       $(".miniSwiper .swiper-slide").click(function(){
         var url = ""
         if(miniSwiper.activeIndex == 0){
