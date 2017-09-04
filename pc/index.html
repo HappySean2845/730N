@@ -215,6 +215,14 @@
           slideShadows : false,
         }
       });
+
+      $("#userAgree").change(function(){
+        console.log($(this).attr("checked"));
+        if($(this).attr("checked") == 'checked'){
+          sqmObj[6].call();
+        }
+      })
+
       $("#bottomTitle").click(function () {
         sqmObj[5].call();
         var url = ""
