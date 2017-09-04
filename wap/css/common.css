@@ -18,6 +18,14 @@
     padding:0.2rem;
     font-size: 0.2rem;
 }
+
+#part_bottom{
+    width: 7.5rem;
+    height: 0.14rem;
+}
+#part_bottom img{
+    width:100%;
+}
 #part_5 .descContent{
     width:100%;
 }

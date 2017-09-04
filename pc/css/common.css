@@ -19,6 +19,13 @@ body .pc.container .context .content{
 .layui-layer-demo .layui-layer-content{
     padding:20px;
 }
+#part_bottom{
+    width: 100%;
+    background: rgb(57,58,59);
+    height: 17px;
+    line-height: 18px;
+    text-align: center;
+}
 #part_6 .prev{
     float: left;
     cursor: pointer;
