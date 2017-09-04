@@ -116,8 +116,8 @@
                 </div>
                 <div class="desc">
                     <img style="width: 1.87rem;display: block" src="../pc/images/part_5_desc_55.png" alt="">
-                    <h2>1元给全新宝骏730的 <br>N种可能</h2>
-                    <p>要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案要文案</p>
+                    <h2 id="bottomTitle">1元给全新宝骏730的 <br>N种可能</h2>
+                    <p id="bottomDesc">到新疆不知中国之大，不到伊犁不知新疆之美。在这片秘境，雄山间有绿玉一般的湖泊镶嵌其中，峻岭外则有广袤的草原，徘徊着三五成群的天马。人在里面，真正的以天为被，以地为床。这次我们和两个四口之家，跟随“中国型爸 挑战海拔730”活动大部队，一起驾乘全新宝骏730，穿行在乌孙山和赛里木湖间，领略伊犁的雄奇俊美。</p>
                     <div class="nextBtn">
                         <img src="../pc/images/part_6_next_11.png" alt="">
                     </div>
@@ -146,6 +146,10 @@
     size();
   }
   $(document).ready(function () {
+    var bottomTitle = '安全舒适 与全新宝骏730探<br>伊犁秘境';
+    var bottomDesc = '到新疆不知中国之大，不到伊犁不知新疆之美。在这片秘境，雄山间有绿玉一般的湖泊镶嵌其中，峻岭外则有广袤的草原，徘徊着三五成群的天马。人在里面，真正的以天为被，以地为床。这次我们和两个四口之家，跟随“中国型爸 挑战海拔730”活动大部队，一起驾乘全新宝骏730，穿行在乌孙山和赛里木湖间，领略伊犁的雄奇俊美...'
+    var bottomTitle_an = '老奥德赛车主说全新宝骏730<br>232和223布局有哪些不同？';
+    var bottomDesc_an = '当看到新车评的“全新宝骏730约驾”招募公告时，我怀抱着好奇（吃瓜群众看热闹不嫌事大）的心态报了名：看XCP对宝骏730和560的评价不低，加之我对手动挡无限的爱，以及对于五菱宝骏神车厂的膜拜，在我还没意识到自己做了什么之前，就手动填写了自荐邮件。然而，回过头来后知后觉的我才看到，这台全新宝骏730竟然是AMT！AMT！AMT！...'
     var swiper = new Swiper('.swiper-container', {
       pagination: '.swiper-pagination',
       effect: 'coverflow',
@@ -161,7 +165,17 @@
         slideShadows : true
       }
     });
+
     var miniSwiper = new Swiper('.miniSwiper', {
+      onTransitionEnd: function(swiper){
+        if(swiper.activeIndex == '0'){
+          $("#bottomTitle").html(bottomTitle_an)
+          $("#bottomDesc").html(bottomDesc_an);
+        }else if(swiper.activeIndex == '1'){
+          $("#bottomTitle").html(bottomTitle)
+          $("#bottomDesc").html(bottomDesc);
+        }
+      },
       pagination: '.swiper-pagination',
       effect: 'coverflow',
       initialSlide:1,
