@@ -22,7 +22,14 @@
     <link rel="stylesheet" href="../clean.css">
     <link rel="stylesheet" href="../lib/swiper.css">
     <link rel="stylesheet" href="css/common.css">
-    <title>730的N种可能</title>
+    <title>一元给全新730的N种可能</title>
+    <script>
+      !(function(a,b,c,d,e,f){var g="",h=a.sessionStorage,i="__admaster_ta_param__",j="tmDataLayer"!==d?"&dl="+d:"";
+      if(a[f]={},a[d]=a[d]||[],a[d].push({startTime:+new Date,event:"tm.js"}),h){var k=a.location.search,
+        l=new RegExp("[?&]"+i+"=(.*?)(&|#|$)").exec(k)||[];l[1]&&h.setItem(i,l[1]),l=h.getItem(i),
+      l&&(g="&p="+l+"&t="+ +new Date)}var m=b.createElement(c),n=b.getElementsByTagName(c)[0];m.src="//tag.cdnmaster.cn/tmjs/tm.js?id="+e+j+g,
+        m.async=!0,n.parentNode.insertBefore(m,n)})(window,document,"script","tmDataLayer","TM-735428","admaster_tm");
+    </script>
 </head>
 <body>
 <div class="Container">
@@ -58,7 +65,7 @@
     </div>
     <div class="part_3" id="part_3">
         <img src="../pc/images/part_3_title_15.png" alt="" class="title">
-        <img src="../pc/images/part_3_btn_03.png" alt="" class="goBuy">
+        <img src="../pc/images/part_3_btn_03.png" alt="" class="goBuy" index="2">
     </div>
     <div class="part_4" id="part_4">
         <img src="../pc/images/part_4_title_03.png" alt="" class="title">
@@ -76,7 +83,7 @@
                 &nbsp; &nbsp;前200名用户可获得50元话费
             </p>
         </div>
-        <div class="btn goBuy">立即抢购</div>
+        <div class="btn goBuy" index="3">立即抢购</div>
     </div>
     <div class="context part_6" id="part_6">
         <div class="content">
@@ -149,6 +156,29 @@
     size();
   }
   $(document).ready(function () {
+    var sqmObj = {
+      "1a":function (){
+        _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-submit']);
+      },
+      "1b":function(name,mobile,province,city,leadsID){
+        _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
+      },
+      2:function(){
+        _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-QCZJhugerush']);
+      },
+      3:function(){
+        _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-YChugerush']);
+      },
+      4:function(){
+        _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-PLAY']);
+      },
+      5:function(){
+        _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-article']);
+      },
+      6:function(){
+        _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-tick']);
+      },
+    }
     var bottomTitle = '安全舒适 与全新宝骏730探<br>伊犁秘境';
     var bottomDesc = '到新疆不知中国之大，不到伊犁不知新疆之美。在这片秘境，雄山间有绿玉一般的湖泊镶嵌其中，峻岭外则有广袤的草原，徘徊着三五成群的天马。人在里面，真正的以天为被，以地为床。这次我们和两个四口之家，跟随“中国型爸 挑战海拔730”活动大部队，一起驾乘全新宝骏730，穿行在乌孙山和赛里木湖间，领略伊犁的雄奇俊美...'
     var bottomTitle_an = '老奥德赛车主说全新宝骏730<br>232和223布局有哪些不同？';
@@ -194,7 +224,8 @@
       }
     });
     $("#bottomTitle").click(function () {
-      var url = ""
+      var url = "";
+      sqmObj[5].call();
       if(miniSwiper.activeIndex == 0){
         url = "http://www.xincheping.com/driveart/245751.html"
       }else if(miniSwiper.activeIndex == 1){
@@ -213,6 +244,7 @@
     })
     $(".swiper-container .swiper-slide").click(
       function () {
+        sqmObj[4].call();
         var videoUrl = '';
         if(swiper.activeIndex == 1){
           videoUrl = 'http://103.7.28.93/vhot2.qqvideo.tc.qq.com/A_89L5wYZA6M3-R1DRl8eR9Gyhhi3CERcLWkKnWUbbdM/l0532d4s97h.m701.mp4?sdtfrom=v3010&guid=579b44539ddc764bb38961c8e0f33b2b&vkey=F005F2527A2F77D0DF2BFAB5DD8B80AB72F9A557026D549EC149B5D77A91276BCB52CA10F9CA9B460739F5D07BEA32B75269D8FF863B59D4D5917B0A6A7CDB1095A41E71F3C0BABF6F2EEE53606BAE8996EC80390BE56440731098B8C77B56735158C949FF322D57661D1EAE89ABD4D3BD2F850713D59403&platform=2';
@@ -262,10 +294,10 @@
     })
     $(".goBuy").click(function () {
 //        console.log($("#part_2"))
+      var index = $(this).attr("index");
       $('.Container').scrollTop(8.48*_fontSize,500)
+      sqmObj[index].call();
     })
-
-
     function createPro() {
       $("#pro").empty();
       $("#pro").append('<option sid="-1">请选择</option>');
@@ -318,6 +350,7 @@
       }
     });
     $("#part_2 .btn").click(function () {
+      sqmObj['1a'].call();
       if($("#userAgree").attr("checked")!='checked'){
         layer.alert("请勾选同意《用户信息保护及政策声明》");
         return false;
@@ -396,6 +429,8 @@
           var wr = result.success[0].result;
           if (wr == 1) {
             layer.alert("预约成功");
+            _tel = _tel.substring(0,3)+'****'+_tel.substring(7,11)
+            sqmObj["1b"](_name, _tel, _province, _city, _dealer);
           } else if (wr == 2) {
             layer.alert('您已预约成功,请勿重复提交');
           } else {
