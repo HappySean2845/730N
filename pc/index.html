@@ -123,12 +123,12 @@
                         <img src="images/part_6_next_11.png" alt="">
                     </div>
                 </div>
-
-        </div>
+           </div>
         </div>
     </div>
 
 </div>
+<script type="text/javascript" src="../public/md5.js"></script>
 <script type="text/javascript" src="../public/province.js"></script>
 <script type="text/javascript" src="../public/city.js"></script>
 <script type="text/javascript" src="../public/730dealer.js"></script>
@@ -335,7 +335,7 @@
             lid: 0,
             name: _name,
             phone: _tel,
-//            key: md5(_tel).toUpperCase().substr(0, 10),
+            key: md5(_tel).toUpperCase().substr(0, 10),
             province: _province,
             city: _city,
             dealercode: _dealer,

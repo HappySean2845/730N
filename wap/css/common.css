@@ -236,6 +236,7 @@
     border-radius: 0.05rem;
     background: #c38c64;
     float:right;
+    cursor:pointer;
 }
 
 #part_2 .rightForm input[type='checkbox']{
