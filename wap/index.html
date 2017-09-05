@@ -425,7 +425,7 @@
         layer.alert("请选择经销商");
         return false;
       }
-      addInfo(name, tel, $("#pro option:selected").attr("sid"), $("#city option:selected").attr("sid"), $("#delear option:selected").attr("sid"))
+      addInfo(name, tel, $("#pro option:selected").val(), $("#city option:selected").val(), $("#delear option:selected").val());
     })
     var validate = {
       isEmpty: function (val) {
