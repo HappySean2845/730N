@@ -99,13 +99,13 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/part_6_item_07.jpg" alt="">
+                        <img src="../public/swiper_1.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/part_6_item_07.jpg" alt="">
+                        <img src="../public/swiper_2.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/part_6_item_07.jpg" alt="">
+                        <img src="../public/swiper_3.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -124,10 +124,10 @@
                 <div class="miniSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="images/part_5_item_45.jpg" alt="">
+                            <img src="../public/miniSwiper_1.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/part_5_item_45.jpg" alt="">
+                            <img src="../public/miniSwiper_2.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -314,8 +314,13 @@
 
       $(".goBuy").click(function () {
 //        console.log($("#part_2"))
-        $(document).scrollTop(587,500)
+//        $(document).scrollTop(587,500)
         var index = $(this).attr("index");
+        if(index == 3){
+          window.open("http://mai.m.yiche.com/?rfpa_tracker=30_2_2567&cta_p=sy6_cu30_pc2_mt2567_wb143&CIGDCID=456712017090110085159a8c1335a9f0&cPlatform=iPad&cityid=2401");
+        }else{
+          window.open("https://www.autohome.com.cn/");
+        }
 //        $('.Container').scrollTop(8.48*_fontSize,500)
         sqmObj[index].call();
 
