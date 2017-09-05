@@ -91,7 +91,7 @@ body .pc.container .context .content{
 #part_5{
     height: 735px;
     background-color: #f1f1f1;
-    background-image: url("../images/part_5_bg_07.jpg");
+    background-image: url("../../images/part_5_bg_07.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
 }
@@ -131,13 +131,13 @@ body .pc.container .context .content{
 }
 #part_4{
     height:431px;
-    background-image: url("../images/part_4_bg_02.jpg");
+    background-image: url("../../images/part_4_bg_02.jpg");
     background-repeat: no-repeat;
     background-position: center center;
 }
 #part_3{
     height:430px;
-    background-image: url("../images/part_3_bg_14.jpg");
+    background-image: url("../../images/part_3_bg_14.jpg");
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -202,10 +202,10 @@ body .pc.container .context .content{
     appearance:none;
     width:18px;
     height:18px;
-    background-image: url(../images/check_off_21.png);
+    background-image: url(../../images/check_off_21.png);
 }
 #part_2 .rightForm input[type='checkbox']:checked{
-    background-image: url(../images/check_on_21.png);
+    background-image: url(../../images/check_on_21.png);
 }
 #part_2 .rightForm input[type='text'],select,input[type='phone']{
     width: 206px;
@@ -224,7 +224,7 @@ body .pc.container .context .content{
     appearance:none;
     -moz-appearance:none;
     -webkit-appearance:none;
-    background-image: url("../images/selectBg_10.png");
+    background-image: url("../../images/selectBg_10.png");
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -233,7 +233,7 @@ body .pc.container .context .content{
 }
 #part_1{
     height: 587px;
-    background-image: url("../images/part_1_bg_02.jpg");
+    background-image: url("../../images/part_1_bg_02.jpg");
     background-repeat: no-repeat;
     background-position: center center;
 }
