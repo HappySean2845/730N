@@ -173,9 +173,9 @@
               gsTracker.setEcomProperty(orderid, "1", name);
               gsTracker.setEcomProperty(orderid, "2", mobile);
               gsTracker.setEcomProperty(orderid, "3", "宝骏730");
-              gsTracker.setEcomProperty(orderid, "4", province);
-              gsTracker.setEcomProperty(orderid, "5", city);
-              gsTracker.setEcomProperty(orderid, "6", leadsID);
+              gsTracker.setEcomProperty(orderid, "4", $("#pro option:selected").val());
+              gsTracker.setEcomProperty(orderid, "5", $("#city option:selected").val());
+              gsTracker.setEcomProperty(orderid, "6", $("#delear option:selected").val());
               gsTracker.addProduct(orderid, location.pathname, location.pathname, 1,1, "宝骏730的N种可能");
               //此处可以根据活动页面实际title进行更换；
               gsTracker.trackECom();
@@ -425,7 +425,7 @@
             layer.alert("请选择经销商");
             return false;
           }
-          addInfo(name, tel, $("#pro option:selected").val(), $("#city option:selected").val(), $("#delear option:selected").val())
+          addInfo(name, tel, $("#pro option:selected").attr('sid'), $("#city option:selected").attr('sid'), $("#delear option:selected").attr('sid'))
       })
       var validate = {
         isEmpty: function (val) {
