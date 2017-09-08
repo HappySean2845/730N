@@ -64,7 +64,7 @@
                             <select name="delear" value=""></select>
                         </li>
                         <li style="width: 100%" class="checkMsg">
-                            <label><input type="checkbox" name="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
+                            <label><input type="checkbox" name="userAgree" class="user_agree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
                         </li>
                     </ul>
                 </div>
@@ -104,7 +104,7 @@
                         <select name="delear" value=""></select>
                     </li>
                     <li style="width: 100%" class="checkMsg">
-                        <label><input type="checkbox" name="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
+                        <label><input type="checkbox" name="userAgree" class="user_agree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
                     </li>
                 </ul>
             </div>
@@ -182,8 +182,9 @@
           _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-submit']);
           _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '点击提交表单pc',location.pathname]);
           },
+          //汽车之家提交
         "1b":function(name,mobile,province,city,leadsID,typeStr){
-          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-QCZJ-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
           var gsq_key = "sqtywl" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
           if (window.gsTracker) {
               var orderid = gsq_key;
@@ -202,8 +203,9 @@
               // gsTracker.track("/targetpage/formsubmit/sqtywlwap");
           }
         },
+        //易车提交
         "1c":function(name,mobile,province,city,leadsID,typeStr){
-          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-YC-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
           var gsq_key = "sqtywl" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
           if (window.gsTracker) {
             var orderid = gsq_key;
@@ -223,16 +225,17 @@
           }
         },
         2:function(){
-          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-QCZJhugerush']);
+          // _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-QCZJhugerush']);
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-QCZJ-submit']);
           _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '汽车之家购车节pc',location.pathname]);
         },
         3:function(){
-//          _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-YChugerush']);
-          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-YChugerush']);
+          // _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-YChugerush']);
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-YC-submit']);
           _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '易车购车文化节pc',location.pathname]);
         },
         4:function(){
-          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-PLAY']);
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-videoplay']);
           _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '点击视频pc',location.pathname]);
         },
         5:function(){
@@ -243,6 +246,14 @@
           _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-tick']);
           _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '点击同意政策pc',location.pathname]);
         },
+        tick1:function(){
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-QCZJ tick']);
+          _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '点击汽车之家同意政策pc',location.pathname]);
+        },
+        tick2:function(){
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-YC tick']);
+          _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '点击易车同意政策pc',location.pathname]);
+        }
       }
       var bottomTitle = '安全舒适 与全新宝骏730探<br>伊犁秘境';
       var bottomDesc = '到新疆不知中国之大，不到伊犁不知新疆之美。在这片秘境，雄山间有绿玉一般的湖泊镶嵌其中，峻岭外则有广袤的草原，徘徊着三五成群的天马。人在里面，真正的以天为被，以地为床。这次我们和两个四口之家，跟随“中国型爸 挑战海拔730”活动大部队，一起驾乘全新宝骏730，穿行在乌孙山和赛里木湖间，领略伊犁的雄奇俊美...'
@@ -289,13 +300,14 @@
         }
       });
 
-      $("input[name='userAgree']").change(function(){
-        console.log($(this).attr("checked"));
-        if($(this).attr("checked") == 'checked'){
-          sqmObj[6].call();
-        }
+      $(".user_agree").eq(0).change(function(){
+        sqmObj['tick1'].call();
+        // console.log(1)
       })
-
+      $(".user_agree").eq(1).change(function(){
+        sqmObj['tick2'].call();
+        // console.log(2)
+      })
       $("#bottomTitle").click(function () {
         sqmObj[5].call();
         var url = ""
