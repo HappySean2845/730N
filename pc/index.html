@@ -39,38 +39,38 @@
             <div class="logo"><img src="images/730logo_03.png" alt=""></div>
         </div>
     </div>
-    <!--第二屏-->
-    <div class="context part_2" id="part_2">
-        <div class="content">
-            <div class="title"><img src="images/part_2_title_03.png" alt=""></div>
-            <div class="car"><img src="images/part_2_car_03.png" alt=""></div>
-            <div class="rightForm">
-                <ul>
-                    <li><input type="text" id="name" value="姓名" maxlength="20"></li>
-                    <li style="margin-left: 10px;"><input type="text" id="phone" value="电话" maxlength="11"></li>
-                    <li>
-                        <select name="" id="pro" value="省"></select>
-                    </li>
-                    <li style="margin-left: 10px;">
-                        <select name="" id="city" value="市"></select>
-                    </li>
-                    <li style="width: 426px;">
-                        <select name="" id="delear" value=""></select>
-                    </li>
-                    <li style="width: 100%" class="checkMsg">
-                        <label><input type="checkbox" id="userAgree"> <span id="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
-                    </li>
-                    <li style="width: 100%;" class="confirmBtn">
-                        <div class="btn">立即提交</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <!--&lt;!&ndash;第二屏&ndash;&gt;-->
+    <!--<div class="context part_2" id="part_2" style="display: none">-->
+        <!--<div class="content">-->
+            <!--<div class="title"><img src="images/part_2_title_03.png" alt=""></div>-->
+            <!--<div class="car"><img src="images/part_2_car_03.png" alt=""></div>-->
+        <!--</div>-->
+    <!--</div>-->
     <div class="context part_3" id="part_3">
         <div class="content">
             <div class="title"><img src="images/part_3_title_15.png"></div>
-            <div class="btn goBuy" index="2"><img src="images/part_3_btn_03.png" alt=""></div>
+            <div style="width: 100%; overflow: hidden">
+                <div class="rightForm" type="#part_3">
+                    <ul>
+                        <li><input type="text" name="name" value="姓名" maxlength="20"></li>
+                        <li style="margin-left: 10px;"><input type="text" name="phone" value="电话" maxlength="11"></li>
+                        <li>
+                            <select name="pro" value="省"></select>
+                        </li>
+                        <li style="margin-left: 10px;">
+                            <select name="city" value="市"></select>
+                        </li>
+                        <li style="width: 426px;">
+                            <select name="delear" value=""></select>
+                        </li>
+                        <li style="width: 100%" class="checkMsg">
+                            <label><input type="checkbox" name="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn goBuy" index="2" type="#part_3"><img src="images/part_3_btn_03.png" alt=""></div>
         </div>
     </div>
     <div class="context part_4" id="part_4">
@@ -90,7 +90,25 @@
                     &nbsp; &nbsp;前200名用户可获得50元话费
                 </p>
             </div>
-            <div class="btn goBuy" index="3">立即抢购</div>
+            <div class="rightForm" style="overflow:hidden" type="#part_4">
+                <ul>
+                    <li><input type="text" name="name" value="姓名" maxlength="20"></li>
+                    <li style="margin-left: 10px;"><input type="text" name="phone" value="电话" maxlength="11"></li>
+                    <li>
+                        <select name="pro" value="省"></select>
+                    </li>
+                    <li style="margin-left: 10px;">
+                        <select name="city" value="市"></select>
+                    </li>
+                    <li style="width: 426px;">
+                        <select name="delear" value=""></select>
+                    </li>
+                    <li style="width: 100%" class="checkMsg">
+                        <label><input type="checkbox" name="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn goBuy" index="3" type="#part_4">立即抢购</div>
         </div>
     </div>
     <div class="context part_6" id="part_6">
@@ -164,7 +182,7 @@
           _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-submit']);
           _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '点击提交表单pc',location.pathname]);
           },
-        "1b":function(name,mobile,province,city,leadsID){
+        "1b":function(name,mobile,province,city,leadsID,typeStr){
           _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
           var gsq_key = "sqtywl" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
           if (window.gsTracker) {
@@ -173,15 +191,35 @@
               gsTracker.setEcomProperty(orderid, "1", name);
               gsTracker.setEcomProperty(orderid, "2", mobile);
               gsTracker.setEcomProperty(orderid, "3", "宝骏730");
-              gsTracker.setEcomProperty(orderid, "4", $("#pro option:selected").val());
-              gsTracker.setEcomProperty(orderid, "5", $("#city option:selected").val());
-              gsTracker.setEcomProperty(orderid, "6", $("#delear option:selected").val());
+              gsTracker.setEcomProperty(orderid, "4", $(typeStr+" select[name='pro'] option:selected").val());
+              gsTracker.setEcomProperty(orderid, "5", $(typeStr+" select[name='city'] option:selected").val());
+              gsTracker.setEcomProperty(orderid, "6", $(typeStr+" select[name='delear'] option:selected").val());
               gsTracker.addProduct(orderid, location.pathname, location.pathname, 1,1, "宝骏730的N种可能");
               //此处可以根据活动页面实际title进行更换；
               gsTracker.trackECom();
               gsTracker.track("/targetpage/formsubmit/sqtywlpc");
               // 当为移动端时，请换成如下代码：
               // gsTracker.track("/targetpage/formsubmit/sqtywlwap");
+          }
+        },
+        "1c":function(name,mobile,province,city,leadsID,typeStr){
+          _smq.push(['custom','17-baojun','baojun730-yiyuan-PC-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
+          var gsq_key = "sqtywl" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
+          if (window.gsTracker) {
+            var orderid = gsq_key;
+            gsTracker.addOrder(orderid, 1);
+            gsTracker.setEcomProperty(orderid, "1", name);
+            gsTracker.setEcomProperty(orderid, "2", mobile);
+            gsTracker.setEcomProperty(orderid, "3", "宝骏730");
+            gsTracker.setEcomProperty(orderid, "4", $(typeStr+" select[name='pro'] option:selected").val());
+            gsTracker.setEcomProperty(orderid, "5", $(typeStr+" select[name='city'] option:selected").val());
+            gsTracker.setEcomProperty(orderid, "6", $(typeStr+" select[name='delear'] option:selected").val());
+            gsTracker.addProduct(orderid, location.pathname, location.pathname, 1,1, "宝骏730的N种可能");
+            //此处可以根据活动页面实际title进行更换；
+            gsTracker.trackECom();
+            gsTracker.track("/targetpage/formsubmit/sqtywlpc");
+            // 当为移动端时，请换成如下代码：
+            // gsTracker.track("/targetpage/formsubmit/sqtywlwap");
           }
         },
         2:function(){
@@ -251,7 +289,7 @@
         }
       });
 
-      $("#userAgree").change(function(){
+      $("input[name='userAgree']").change(function(){
         console.log($(this).attr("checked"));
         if($(this).attr("checked") == 'checked'){
           sqmObj[6].call();
@@ -300,7 +338,7 @@
         }
       )
 
-      $("#checkMsg").click(function(){
+      $("span[name='checkMsg']").click(function(){
         layer.open({
           title:"用户信息保护及对策声明",
           type: 1,
@@ -333,100 +371,101 @@
       $(".goBuy").click(function () {
 //        console.log($("#part_2"))
 //        $(document).scrollTop(587,500)
+        var _pp = $(this).attr("type");
         var index = $(this).attr("index");
+        if(localStorage.getItem("joinSuccess")!='1'){
+          if($(_pp+" input[name='userAgree']").attr("checked")!='checked'){
+            layer.alert("请勾选同意《用户信息保护及政策声明》");
+            return false;
+          };
+          var name = $(_pp+" input[name='name']").val();
+          if (!validate.isEmpty(name)) {s
+            layer.alert("请输入姓名");
+            return false;
+          }
+          var tel = $(_pp+" input[name='phone']").val();
+          if (!validate.isMobile(tel)) {
+            layer.alert("请输入正确的手机号码");
+            return false;
+          }
+          var province = $(_pp+" select[name='pro'] option:selected").text();
+          if (province == "请选择") {
+            layer.alert("请选择省份");
+            return false;
+          }
+          var city = $(_pp+" select[name='city'] option:selected").text();
+          if (city == "请选择") {
+            layer.alert("请选择城市");
+            return false;
+          }
+          var delear = $(_pp+" select[name='delear'] option:selected").text();
+          if (delear == "请选择") {
+            layer.alert("请选择经销商");
+            return false;
+          }
+          sqmObj[index].call();
+          addInfo(name, tel, $(_pp+" select[name='pro'] option:selected").attr('sid'), $(_pp+" select[name='city'] option:selected").attr('sid'), $(_pp+" select[name='delear'] option:selected").attr('sid'),_pp)
+        }
         if(index == 3){
           window.open("http://mai.m.yiche.com/?rfpa_tracker=30_2_2567&cta_p=sy6_cu30_pc2_mt2567_wb143&CIGDCID=456712017090110085159a8c1335a9f0&cPlatform=iPad&cityid=2401");
         }else{
           window.open("http://mall.autohome.com.cn/subject/2017/9/baojunpinpai33/");
         }
 //        $('.Container').scrollTop(8.48*_fontSize,500)
-        sqmObj[index].call();
 
       })
       function createPro() {
-        $("#pro").empty();
-        $("#pro").append('<option sid="-1">请选择</option>');
+        $("select[name='pro']").empty();
+        $("select[name='pro']").append('<option sid="-1">请选择</option>');
         for (var i = 0; i < provinceData.length; i++) {
-          $("#pro").append('<option sid=' + provinceData[i].proid + '>' + provinceData[i].proname + '</option>');
+          $("select[name='pro']").append('<option sid=' + provinceData[i].proid + '>' + provinceData[i].proname + '</option>');
         }
       }
       createPro();
-      $("#pro").change(function(event) {
-        var _id = $("#pro option:selected").attr("sid");
-
-        $("#city").empty();
-        $("#city").append('<option sid="-1">请选择</option>');
+      $("select[name='pro']").change(function(event) {
+        var _pp =  $(this).parent("li").parent("ul").parent("div").attr("type");
+        var _id = $(_pp+" select[name='pro'] option:selected").attr("sid");
+        $(_pp+" select[name='city']").empty();
+        $(_pp+" select[name='city']").append('<option sid="-1">请选择</option>');
         for (var i = 0; i < cicyData.length; i++) {
           if (cicyData[i].proID == _id) {
-            $("#city").append('<option sid=' + cicyData[i].cityID + '>' + cicyData[i].cityName + '</option>');
+            $(_pp+" select[name='city']").append('<option sid=' + cicyData[i].cityID + '>' + cicyData[i].cityName + '</option>');
           }
         }
 
-        var _id = $("#city option:selected").attr("sid");
-        $("#delear").empty();
-        $("#delear").append('<option sid="-1">请选择</option>');
+        var _id = $(_pp+" select[name='city'] option:selected").attr("sid");
+        $(_pp+" select[name='delear']").empty();
+        $(_pp+" select[name='delear']").append('<option sid="-1">请选择</option>');
         for (var i = 0; i < WuLingdealers.length; i++) {
           if (WuLingdealers[i].city == _id) {
-            $("#delear").append('<option sid=' + WuLingdealers[i].dealerCode + '>' + WuLingdealers[i].company + '</option>');
+            $(_pp+" select[name='delear']").append('<option sid=' + WuLingdealers[i].dealerCode + '>' + WuLingdealers[i].company + '</option>');
           }
         }
       });
-
-      $("#name").focus(function () {
+      $("select[name='city']").change(function(event) {
+        var _pp =  $(this).parent("li").parent("ul").parent("div").attr("type");
+        var _id = $(_pp+" select[name='city'] option:selected").attr("sid");
+        $(_pp+" select[name='delear']").empty();
+        for (var i = 0; i < WuLingdealers.length; i++) {
+          if (WuLingdealers[i].city == _id) {
+            $(_pp+" select[name='delear']").append('<option sid=' + WuLingdealers[i].dealerCode + '>' + WuLingdealers[i].company + '</option>');
+          }
+        }
+      });
+      $("input[name='name']").focus(function () {
          if($(this).val()=="姓名") $(this).val("");
       })
-      $("#name").blur(function () {
+      $("input[name='name']").blur(function () {
         if($(this).val()=="") $(this).val("姓名");
       })
-      $("#phone").focus(function () {
+      $("input[name='phone']").focus(function () {
         if($(this).val()=="电话") $(this).val("");
       })
-      $("#phone").blur(function () {
+      $("input[name='phone']").blur(function () {
         if($(this).val()=="") $(this).val("电话");
       })
-      $("#city").change(function(event) {
-        var _id = $("#city option:selected").attr("sid");
 
-        $("#delear").empty();
-        for (var i = 0; i < WuLingdealers.length; i++) {
-          if (WuLingdealers[i].city == _id) {
-            $("#delear").append('<option sid=' + WuLingdealers[i].dealerCode + '>' + WuLingdealers[i].company + '</option>');
-          }
-        }
-      });
-      $("#part_2 .btn").click(function () {
-        sqmObj['1a'].call();
-        if($("#userAgree").attr("checked")!='checked'){
-          layer.alert("请勾选同意《用户信息保护及政策声明》");
-          return false;
-        };
-          var name = $("#name").val();
-          if (!validate.isEmpty(name)) {
-            layer.alert("请输入姓名");
-            return false;
-          }
-          var tel = $("#phone").val();
-          if (!validate.isMobile(tel)) {
-            layer.alert("请输入正确的手机号码");
-            return false;
-          }
-          var province = $("#pro option:selected").text();
-          if (province == "请选择") {
-            layer.alert("请选择省份");
-            return false;
-          }
-          var city = $("#city option:selected").text();
-          if (city == "请选择") {
-            layer.alert("请选择城市");
-            return false;
-          }
-          var delear = $("#delear option:selected").text();
-          if (delear == "请选择") {
-            layer.alert("请选择经销商");
-            return false;
-          }
-          addInfo(name, tel, $("#pro option:selected").attr('sid'), $("#city option:selected").attr('sid'), $("#delear option:selected").attr('sid'))
-      })
+
       var validate = {
         isEmpty: function (val) {
           if (val == "") {
@@ -446,7 +485,7 @@
           }
         },
       }
-      function addInfo(_name, _tel, _province, _city, _dealer) {
+      function addInfo(_name, _tel, _province, _city, _dealer, type) {
         clickFlag = false;
         $.ajax({
           url: "http://www.sgmw.com.cn/ashx/reservation_json.aspx",
@@ -474,8 +513,13 @@
             var wr = result.success[0].result;
             if (wr == 1) {
               layer.alert("预约成功");
+              localStorage.setItem("joinSuccess",'1');
               _tel = _tel.substring(0,3)+'****'+_tel.substring(7,11)
-              sqmObj["1b"](_name, _tel, _province, _city, _dealer);
+              if(type.indexOf("part_3")>-1){
+                sqmObj["1b"](_name, _tel, _province, _city, _dealer, type);
+              }else if(type.indexOf("part_4")>-1){
+                sqmObj["1c"](_name, _tel, _province, _city, _dealer, type);
+              }
             } else if (wr == 2) {
               layer.alert('您已预约成功,请勿重复提交');
             } else {
