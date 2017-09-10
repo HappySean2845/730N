@@ -372,21 +372,22 @@
 }
 #part_4 .rightForm li.checkMsg{
     font-size: 0.14rem;
-    line-height: 0.22em;
 }
 #part_4 .rightForm input[type='checkbox']{
     /*vertical-align: -1px;*/
-    /*margin-top:-0.02rem;*/
+    margin-top:-0.04rem;
     -webkit-appearance:none;
     appearance:none;
-    width:0.14rem;
-    height: 0.14rem;
+    width:0.24rem;
+    height: 0.24rem;
+    background-color: rgba(0,0,0,0);
     background-image: url(../images/check_off_21.png);
     background-size: 100% 100%;
 }
 #part_4 .rightForm input[type='checkbox']:checked{
+    background-color: rgba(0,0,0,0);
     background-image: url(../images/check_on_21.png);
-    background-size: 100% 100%;
+    background-size: 0.24rem 0.24rem;
 }
 #part_4 .rightForm input[type='text'],#part_4 .rightForm select, #part_4 .rightForm input[type='phone']{
     width: 1.72rem;
