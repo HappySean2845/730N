@@ -386,7 +386,8 @@
 //        $(document).scrollTop(587,500)
       var _pp = $(this).attr("type");
       var index = $(this).attr("index");
-      if(localStorage.getItem("joinSuccess")!='1'){
+      var _lsTel = localStorage.getItem("_lsTel")?localStorage.getItem("_lsTel"):"";
+//      if(localStorage.getItem("joinSuccess")!='1'){
         if($(_pp+" input[name='userAgree']").attr("checked")!='checked'){
           layer.alert("请勾选同意《用户信息保护及政策声明》");
           return false;
@@ -397,6 +398,7 @@
           return false;
         }
         var tel = $(_pp+" input[name='phone']").val();
+        var checkFlag = _lsTel.indexOf(tel)>-1?false:true;      //是否需要校验该手机号
         if (!validate.isMobile(tel)) {
           layer.alert("请输入正确的手机号码");
           return false;
@@ -417,8 +419,10 @@
           return false;
         }
         sqmObj[index].call();
-        addInfo(name, tel, $(_pp+" select[name='pro'] option:selected").attr('sid'), $(_pp+" select[name='city'] option:selected").attr('sid'), $(_pp+" select[name='delear'] option:selected").attr('sid'),_pp)
-      }
+        if(checkFlag){
+          addInfo(name, tel, $(_pp+" select[name='pro'] option:selected").attr('sid'), $(_pp+" select[name='city'] option:selected").attr('sid'), $(_pp+" select[name='delear'] option:selected").attr('sid'),_pp)
+        }
+//      }
       if(index == 3){
         window.open("http://mai.m.yiche.com/?rfpa_tracker=30_2_2567&cta_p=sy6_cu30_pc2_mt2567_wb143&CIGDCID=456712017090110085159a8c1335a9f0&cPlatform=iPad&cityid=2401");
       }else{
@@ -529,7 +533,8 @@
           var wr = result.success[0].result;
           if (wr == 1) {
             layer.alert("预约成功");
-            localStorage.setItem("joinSuccess",'1');
+            var _lsTel = localStorage.getItem("_lsTel")?localStorage.getItem("_lsTel"):"";
+            localStorage.setItem("_lsTel",_lsTel.length<1?_tel:(_lsTel+'&'+_tel));
             _tel = _tel.substring(0,3)+'****'+_tel.substring(7,11)
             if(type.indexOf("part_3")>-1){
               sqmObj["1b"](_name, _tel, _province, _city, _dealer, type);
