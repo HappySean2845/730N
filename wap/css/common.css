@@ -293,11 +293,12 @@
 
 
 #part_3 .rightForm{
-    width: 5.58rem;
-    margin:0 auto;
+    width: 6.08rem;
+    /*margin:0 auto;*/
     font-size: 0.16rem;
     margin-top: 3.16rem;
     overflow: hidden;
+    margin-left: 1.08rem;
 }
 #part_3 .rightForm li{
     float: left;
