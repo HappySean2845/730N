@@ -10,8 +10,8 @@
 }
 .Container{
     width: 7.5rem;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /*overflow-x: hidden;*/
+    /*overflow-y: scroll;*/
 }
 
 .layui-layer-demo .layui-layer-content{
