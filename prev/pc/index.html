@@ -155,6 +155,7 @@
 <script type="text/javascript" src="js/730dealer.js"></script>
 <script type="text/javascript">
     $(function () {
+      var submit_flag = false;
       layer.config({
 //        skin: 'demo-class'
         title:"提示"
@@ -332,16 +333,19 @@
 
       $(".goBuy").click(function () {
 //        console.log($("#part_2"))
-//        $(document).scrollTop(587,500)
-        var index = $(this).attr("index");
-        if(index == 3){
-          window.open("http://www.bitauto.com/topics/adtopic/baojun_jingpai/index.shtml?rfpa_tracker=30_36_2592&ychrfpa_tracker=20_15_1_590_2&cta_p=sy6_cu30_pc36_mt2592_wb143#jp2");
+        console.log(submit_flag)
+        if(submit_flag){
+          var index = $(this).attr("index");
+    //      $('.Container').scrollTop(8.48*_fontSize,500)
+          if(index == 3){
+            window.open("http://www.bitauto.com/topics/adtopic/baojun_jingpai/index.shtml?rfpa_tracker=30_36_2592&ychrfpa_tracker=20_15_1_590_2&cta_p=sy6_cu30_pc36_mt2592_wb143#jp2");
+          }else{
+            window.open("http://mall.autohome.com.cn/subject/2017/9/baojunpinpai33/");
+          }
+          sqmObj[index].call();
         }else{
-          window.open("http://mall.autohome.com.cn/subject/2017/9/baojunpinpai33/");
+          alert('请先提交信息');
         }
-//        $('.Container').scrollTop(8.48*_fontSize,500)
-        sqmObj[index].call();
-
       })
       function createPro() {
         $("#pro").empty();
@@ -475,6 +479,7 @@
             if (wr == 1) {
               layer.alert("预约成功");
               _tel = _tel.substring(0,3)+'****'+_tel.substring(7,11)
+              submit_flag = true;
               sqmObj["1b"](_name, _tel, _province, _city, _dealer);
             } else if (wr == 2) {
               layer.alert('您已预约成功,请勿重复提交');
