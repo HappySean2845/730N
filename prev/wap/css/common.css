@@ -1,0 +1,294 @@
+* li{
+    list-style:none;
+
+}
+/**{*/
+    /*font-size:0.24rem;*/
+/*}*/
+.layui-layer-btn0{
+    font-size:0.24rem!important;
+}
+.Container{
+    width: 7.5rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.layui-layer-demo .layui-layer-content{
+    padding:0.2rem;
+    font-size: 0.2rem;
+}
+
+#part_bottom{
+    width: 7.5rem;
+    height: 0.14rem;
+}
+#part_bottom img{
+    width:100%;
+}
+#part_5 .descContent{
+    width:100%;
+}
+#part_5 .descContent .desc{
+    width:4.8rem;
+    margin: 0 auto;
+    margin-top: 0.47rem;
+    /*margin-right:80px;*/
+}
+#part_5 .descContent .desc h2{
+    font-size:0.37rem;
+    line-height:0.45rem;
+    margin-top: 0.4rem;
+    font-weight:normal;
+}
+#part_5 .descContent .desc p{
+    color: #6e6e6e;
+    font-size: 0.15rem;
+    line-height: 0.2rem;
+    margin-top:0.24rem;
+}
+#part_5 .descContent .nextBtn{
+    text-align: right;
+    padding-top:58px;
+    width: 398px;
+}
+#part_5 .descContent .miniSwiper{
+    width:3.81rem;
+    height: 4.49rem;
+    margin:0 auto;
+    margin-top: 0.4rem;
+}
+#part_5 .descContent .miniSwiper .swiper-slide{
+    height:4.49rem;
+}
+#part_5 .descContent .miniSwiper .swiper-slide img{
+    height:4.49rem;
+}
+
+
+
+#part_5 .title{
+    width: 3.28rem;
+    /*height:6.23rem;*/
+    display: block;
+    margin:0 auto;
+    padding-top: 0.55rem;
+}
+#part_5{
+    width: 7.5rem;
+    height: 11.88rem;
+    background-color: #f1f1f1;
+    background-image: url("../images/part_5_bg_07.jpg");
+    background-size: 10rem 1.03rem;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+#part_6 .prev{
+    float: left;
+    cursor: pointer;
+    width: 1.6rem;
+    margin-left: 1.06rem;
+}
+#part_6 .next{
+    float: right;
+    cursor: pointer;
+    width: 1.6rem;
+    margin-right: 1.06rem;
+}
+#part_6 .swiper-container{
+    height: 3.06rem;
+    width:100%;
+    margin-top: 0.44rem;
+    /*margin-top:100px;*/
+}
+#part_6 .swiper-container .swiper-slide{
+    width: 5.38rem;
+    height: 3.06rem;
+}
+#part_6 .swiper-container .swiper-slide img{
+    width: 5.38rem;
+    height: 3.06rem;
+}
+#part_6{
+    width: 7.5rem;
+    height: 6.23rem;
+    background: #ffffff;
+}
+#part_6 .title{
+    width: 3.28rem;
+    /*height:6.23rem;*/
+    display: block;
+    margin:0 auto;
+    padding-top: 0.55rem;
+}
+
+
+
+
+#part_1{
+    width: 7.5rem;
+    height:8.48rem;
+    background: url("../images/part_1_bg_01.jpg");
+    background-size:100% 100%;
+    position: relative;
+}
+#part_1 img.text{
+    width: 4.7rem;
+    position: absolute;
+    left: 0.62rem;
+    top: 1.02rem;
+}
+#part_1 img.logo{
+    width:0.45rem;
+    position: absolute;
+    top: 0.26rem;
+    right: 0.5rem;
+}
+#part_4 .title{
+    /*position: relative;*/
+    margin-top: -0.47rem;
+    width: 3.28rem;
+    margin-left: 0.53rem;
+}
+#part_4 .btn{
+    width: 2.44rem;
+    height: 0.54rem;
+    line-height: 0.54rem;
+    background: #c69c6d;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.22rem;
+    border-radius: 0.04rem;
+    margin-top: 0.42rem;
+    margin-left: 0.8rem;
+    /*margin-left: 120px;*/
+}
+#part_4 .text{
+    width:5.2rem;
+    color:#666666;
+    line-height: 0.4rem;
+    font-size: 0.22rem;
+    margin-left: 0.8rem;
+    font-weight:bold;
+}
+#part_4{
+    width: 7.5rem;
+    height: 6.48rem;
+    background: url("../images/part_4_bg_13.jpg");
+    background-size:100% 100%;
+    position: relative;
+}
+#part_3{
+    width: 7.5rem;
+    height: 6.96rem;
+    background: url("../images/part_3_bg_02.jpg");
+    background-size:100% 100%;
+    position: relative;
+}
+#part_3 .title{
+    /*position: relative;*/
+    margin-top: -0.47rem;
+    width: 3.28rem;
+    margin-left: 0.53rem;
+}
+#part_3 .goBuy{
+    width: 2.4rem;
+    display: block;
+    margin:0 auto;
+    margin-top: 4.42rem;
+}
+#part_2{
+    width: 7.5rem;
+    height:10.42rem;
+    background: #ffffff;
+    position: relative;
+    background-image: url("../images/part_2_car_03.png");
+    background-repeat: no-repeat;
+    background-size: 4.82rem 3.64rem;
+    background-position: center 6.18rem;
+}
+#part_2 .title{
+    width:100%;
+    text-align: center;
+    padding-top: 0.59rem;
+}
+#part_2 .title img{
+    width: 3.27rem;
+}
+
+#part_2 .rightForm{
+    width: 5.7rem;
+    margin:0 auto;
+    font-size: 0.16rem;
+    margin-top: 0.16rem;
+}
+#part_2 .rightForm li{
+    float: left;
+    width: 2.69rem;
+    height: 0.49rem;
+    margin-bottom: 0.2rem;
+
+}
+#part_2 .rightForm li.checkMsg{
+    font-size: 0.18rem;
+    line-height: 0.24rem;
+    font-weight:bold;
+}
+
+#part_2 .rightForm li .btn{
+    width: 1.43rem;
+    height: 0.49rem;
+    color: #ffffff;
+    font-weight:bold;
+    text-align: center;
+    line-height: 0.49rem;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    background: #c38c64;
+    float:right;
+    cursor:pointer;
+}
+
+#part_2 .rightForm input[type='checkbox']{
+    /*vertical-align: -1px;*/
+    margin-top:-0.02rem;
+    -webkit-appearance:none;
+    appearance:none;
+    width:0.18rem;
+    height: 0.18rem;
+    background-image: url(../images/check_off_21.png);
+    background-size: 100% 100%;
+}
+#part_2 .rightForm input[type='checkbox']:checked{
+    background-image: url(../images/check_on_21.png);
+    background-size: 100% 100%;
+}
+#part_2 .rightForm input[type='text'],select,input[type='phone']{
+    width: 2.69rem;
+    height: 0.49rem;
+    line-height: 0.49rem;
+    border: 1px solid #8f8f8f;
+    color: #8f8f8f;
+    -webkit-border-radius:0.04rem;
+    -moz-border-radius:0.04rem;
+    border-radius:0.04rem;
+    font-weight:bold;
+    padding-left: 0.1rem;
+    background: #ffffff;
+}
+#part_2 .rightForm select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background-image: url("../images/selectBg_10.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+#part_2 .rightForm #delear{
+    width: 5.56rem;
+}
+
+
+
