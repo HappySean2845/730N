@@ -155,7 +155,7 @@
 <script type="text/javascript">
   // var windowHeight = $(window).height();
   // $(".Container").css("height", windowHeight);
-  var submit_flag = false;
+  // var submit_flag = false;
   function size() {
     var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
       _UIWidth = 750,
@@ -336,7 +336,7 @@
     })
     $(".goBuy").click(function () {
 //        console.log($("#part_2"))
-      if(submit_flag){
+      if(localStorage.submit_flag){
         var index = $(this).attr("index");
   //      $('.Container').scrollTop(8.48*_fontSize,500)
         if(index == 3){
@@ -481,7 +481,7 @@
           if (wr == 1) {
             layer.alert("预约成功");
             _tel = _tel.substring(0,3)+'****'+_tel.substring(7,11)
-            submit_flag = true;
+            localStorage.submit_flag = true;
             sqmObj["1b"](_name, _tel, _province, _city, _dealer);
           } else if (wr == 2) {
             layer.alert('您已预约成功,请勿重复提交');
