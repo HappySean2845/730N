@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/clean.css">
     <link rel="stylesheet" href="lib/swiper.css">
     <link rel="stylesheet" href="css/common.css">
-    <title>一元给全新730的N种可能</title>
+    <title>突破百万，宝骏730携礼再出发！</title>
     <script>
       !(function(a,b,c,d,e,f){var g="",h=a.sessionStorage,i="__admaster_ta_param__",j="tmDataLayer"!==d?"&dl="+d:"";
       if(a[f]={},a[d]=a[d]||[],a[d].push({startTime:+new Date,event:"tm.js"}),h){var k=a.location.search,
@@ -45,10 +45,10 @@
 <body>
 <div class="Container">
     <div class="part_1" id="part_1">
-        <img src="images/part1_text_03.png" alt="" class="text">
+        <!-- <img src="images/part1_text_03.png" alt="" class="text"> -->
         <img src="images/730logo_03.png" alt="" class="logo">
     </div>
-    <div class="part_2" id="part_2">
+    <!-- <div class="part_2" id="part_2">
         <div class="title">
             <img src="images/part_2_title_03.png" alt="">
         </div>
@@ -73,12 +73,30 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <div class="part_3" id="part_3">
         <img src="images/part_3_title_15.png" alt="" class="title">
-        <img src="images/part_3_btn_03.png" alt="" class="goBuy" index="2">
+        <div class="rightForm" type="#part_3">
+            <ul>
+                <li><input type="text" id="name" value="姓名" maxlength="20"></li>
+                <li style="margin-left: 10px;"><input type="text" id="phone" value="电话" maxlength="11"></li>
+                <li>
+                    <select name="" id="pro" value="省"></select>
+                </li>
+                <li style="margin-left: 10px;">
+                    <select name="" id="city" value="市"></select>
+                </li>
+                <li style="width: 6rem;">
+                    <select name="" id="delear" value="" style="width:5.6rem;"></select>
+                </li>
+                <li style="width: 100%" class="checkMsg">
+                    <label><input type="checkbox" name="userAgree" class="user_agree" id="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
+                </li>
+            </ul>
+        </div>
+        <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2">
     </div>
-    <div class="part_4" id="part_4">
+    <!-- <div class="part_4" id="part_4">
         <img src="images/part_4_title_03.png" alt="" class="title">
         <div class="text">
             <p>
@@ -95,7 +113,7 @@
             </p>
         </div>
         <div class="btn goBuy" index="3">立即抢购</div>
-    </div>
+    </div> -->
     <div class="context part_6" id="part_6">
         <div class="content">
             <img src="images/part_6_title_03.png" alt="" class="title">
@@ -334,21 +352,15 @@
       index>1?index = 0:index = index;
       miniSwiper.slideTo(index)
     })
-    $(".goBuy").click(function () {
-//        console.log($("#part_2"))
-      if(localStorage.submit_flag){
-        var index = $(this).attr("index");
-  //      $('.Container').scrollTop(8.48*_fontSize,500)
-        if(index == 3){
-          window.open("http://www.bitauto.com/topics/adtopic/baojun_jingpai/index.shtml?rfpa_tracker=30_36_2592&ychrfpa_tracker=20_15_1_590_2&cta_p=sy6_cu30_pc36_mt2592_wb143#jp2");
-        }else{
-          window.open("http://mall.autohome.com.cn/subject/2017/9/baojunpinpai33/");
-        }
-        sqmObj[index].call();
-      }else{
-        alert('请先提交信息');
-      }
-    })
+//     $(".goBuy").click(function () {
+// //        console.log($("#part_2"))
+//       if(localStorage.submit_flag){
+//         window.open('https://m.mall.autohome.com.cn/subject/2017/10/shilibaojun33/')
+//         sqmObj[2].call();
+//       }else{
+//         alert('请先提交信息');
+//       }
+//     })
     function createPro() {
       $("#pro").empty();
       $("#pro").append('<option sid="-1">请选择</option>');
@@ -400,7 +412,7 @@
         }
       }
     });
-    $("#part_2 .btn").click(function () {
+    $("#part_3 .btn").click(function () {
       sqmObj['1a'].call();
       if($("#userAgree").attr("checked")!='checked'){
         layer.alert("请勾选同意《用户信息保护及政策声明》");
@@ -479,10 +491,12 @@
         success: function (result) {
           var wr = result.success[0].result;
           if (wr == 1) {
-            layer.alert("预约成功");
             _tel = _tel.substring(0,3)+'****'+_tel.substring(7,11)
             localStorage.submit_flag = true;
             sqmObj["1b"](_name, _tel, _province, _city, _dealer);
+            sqmObj[2].call();
+            alert("预约成功");
+            window.location.href='https://m.mall.autohome.com.cn/subject/2017/10/shilibaojun33/';
           } else if (wr == 2) {
             layer.alert('您已预约成功,请勿重复提交');
           } else {

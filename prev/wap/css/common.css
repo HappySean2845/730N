@@ -161,28 +161,28 @@
     font-weight: bold;
     font-size: 0.22rem;
     border-radius: 0.04rem;
-    margin-top: 0.42rem;
+    margin-top: 0.24rem;
     margin-left: 0.8rem;
     /*margin-left: 120px;*/
 }
 #part_4 .text{
     width:5.2rem;
     color:#666666;
-    line-height: 0.4rem;
-    font-size: 0.22rem;
+    line-height: 0.32rem;
+    font-size: 0.2rem;
     margin-left: 0.8rem;
     font-weight:bold;
 }
 #part_4{
     width: 7.5rem;
-    height: 6.48rem;
+    height: 6.57rem;
     background: url("../images/part_4_bg_13.jpg");
     background-size:100% 100%;
     position: relative;
 }
 #part_3{
     width: 7.5rem;
-    height: 6.96rem;
+    height: 8.47rem;
     background: url("../images/part_3_bg_02.jpg");
     background-size:100% 100%;
     position: relative;
@@ -197,7 +197,7 @@
     width: 2.4rem;
     display: block;
     margin:0 auto;
-    margin-top: 4.42rem;
+    margin-top: 0.36rem;
 }
 #part_2{
     width: 7.5rem;
@@ -266,7 +266,7 @@
     background-image: url(../images/check_on_21.png);
     background-size: 100% 100%;
 }
-#part_2 .rightForm input[type='text'],select,input[type='phone']{
+#part_2 .rightForm input[type='text'],#part_2 .rightForm select, #part_2 .rightForm input[type='phone']{
     width: 2.69rem;
     height: 0.49rem;
     line-height: 0.49rem;
@@ -289,6 +289,132 @@
 }
 #part_2 .rightForm #delear{
     width: 5.56rem;
+}
+
+
+
+#part_3 .rightForm{
+    width: 6.08rem;
+    /*margin:0 auto;*/
+    font-size: 0.16rem;
+    margin-top: 3rem;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+#part_3 .rightForm li{
+    float: left;
+    width: 2.69rem;
+    height: 0.49rem;
+    margin-bottom: 0.2rem;
+
+}
+#part_3 .rightForm li.checkMsg{
+    font-size: 0.18rem;
+    line-height: 0.24rem;
+    font-weight:bold;
+    color: #d8d8d8;
+}
+#part_3 .rightForm input[type='checkbox']{
+    /*vertical-align: -1px;*/
+    margin-top:-0.02rem;
+    -webkit-appearance:none;
+    appearance:none;
+    width:0.18rem;
+    height: 0.18rem;
+    background-image: url(../images/check_off_new.png);
+    background-size: 100% 100%;
+}
+#part_3 .rightForm input[type='checkbox']:checked{
+    background-image: url(../images/check_on_new.png);
+    background-size: 100% 100%;
+}
+#part_3 .rightForm input[type='text'],#part_3 .rightForm select, #part_3 .rightForm input[type='phone']{
+    width: 2.69rem;
+    height: 0.49rem;
+    line-height: 0.49rem;
+    border: 1px solid #9d9ea1;
+    color: #d6d6d6;
+    -webkit-border-radius:0.04rem;
+    -moz-border-radius:0.04rem;
+    border-radius:0.04rem;
+    font-weight:bold;
+    padding-left: 0.1rem;
+    background-color: rgba(0,0,0,0)!important;
+}
+#part_3 .rightForm select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background-image: url("../images/selectBg_new.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+#part_3 .rightForm select[name='delear']{
+    width: 5.56rem;
+}
+
+
+
+
+#part_4 .rightForm{
+    width: 4.58rem;
+    /*margin:0 auto;*/
+    font-size: 0.16rem;
+    /*margin-top: 3.16rem;*/
+    overflow: hidden;
+    margin-left: 0.78rem;
+    margin-top: 0.36rem;
+}
+#part_4 .rightForm li{
+    float: left;
+    width: 1.72rem;
+    height: 0.32rem;
+    margin-bottom: 0.14rem;
+
+}
+#part_4 .rightForm li.checkMsg{
+    font-size: 0.14rem;
+}
+#part_4 .rightForm input[type='checkbox']{
+    /*vertical-align: -1px;*/
+    margin-top:-0.04rem;
+    -webkit-appearance:none;
+    appearance:none;
+    width:0.24rem;
+    height: 0.24rem;
+    background-color: rgba(0,0,0,0);
+    background-image: url(../images/check_off_21.png);
+    background-size: 100% 100%;
+}
+#part_4 .rightForm input[type='checkbox']:checked{
+    background-color: rgba(0,0,0,0);
+    background-image: url(../images/check_on_21.png);
+    background-size: 0.24rem 0.24rem;
+}
+#part_4 .rightForm input[type='text'],#part_4 .rightForm select, #part_4 .rightForm input[type='phone']{
+    width: 1.72rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    border: 1px solid #8f8f8f;
+    color: #8f8f8f;
+    -webkit-border-radius:0.04rem;
+    -moz-border-radius:0.04rem;
+    border-radius:0.04rem;
+    font-weight:bold;
+    padding-left: 0.1rem;
+    background-color: rgba(0,0,0,0);
+}
+#part_4 .rightForm select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background-image: url("../images/selectBg_10.png");
+    background-size: 0.184rem 0.09rem;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+#part_4 .rightForm select[name='delear']{
+    width: 3.66rem;
 }
 
 
