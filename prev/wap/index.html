@@ -307,21 +307,25 @@
         sqmObj[4].call();
         var videoUrl = '';
         if(swiper.activeIndex == 1){
-          videoUrl = 'http://103.7.28.93/vhot2.qqvideo.tc.qq.com/A_89L5wYZA6M3-R1DRl8eR9Gyhhi3CERcLWkKnWUbbdM/l0532d4s97h.m701.mp4?sdtfrom=v3010&guid=579b44539ddc764bb38961c8e0f33b2b&vkey=F005F2527A2F77D0DF2BFAB5DD8B80AB72F9A557026D549EC149B5D77A91276BCB52CA10F9CA9B460739F5D07BEA32B75269D8FF863B59D4D5917B0A6A7CDB1095A41E71F3C0BABF6F2EEE53606BAE8996EC80390BE56440731098B8C77B56735158C949FF322D57661D1EAE89ABD4D3BD2F850713D59403&platform=2';
+          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=l0532d4s97h&auto=0';
+          videoUrl = 'https://v.qq.com/x/page/l0532d4s97h.html';
         }else if(swiper.activeIndex == 2){
-          videoUrl = 'http://ugclx.video.gtimg.com/flv/246/179/k0532t6x5w0.m701.mp4?sdtfrom=v3010&guid=70123f4af8b38837876058058b299613&vkey=65C6C2945C17C65928CDBAA82D46C6AD7F2346243E62DD7A7F12A9EB3A24BDCC6E5F049DBABFB18BC6326005BE7CBD5F8F031BEEDDC2B24660FBFD432AB51A3964E496E2BA2666C9920827552E81B205BA6F14782756784CD0F098AB3868E46300A55651456FFAD20AB8E2AFF11ABE43A14B4B031EDBACFF&platform=2';
+          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=k0532t6x5w0&auto=0';
+          videoUrl = 'https://v.qq.com/x/page/k0532t6x5w0.html';
         }else if(swiper.activeIndex == 0){
-          videoUrl = 'http://140.207.247.27/vhot2.qqvideo.tc.qq.com/AB0d-StcLwFgdsY-xjEgR3hjfRo5_-VOMPNPbuDwDxBw/v0532ifzplw.m701.mp4?sdtfrom=v3010&guid=70123f4af8b38837876058058b299613&vkey=7B8CDA3130E19DAC1379788BAEC2151D65FCAB43ECB482B2C60A8809E0C126913BD4917BBA809F47F02348704C925C232DBE210A359FBB2254B201573B0D2E8D28C525BC39D2406C841646C56BF72C29A5551CAED7147C91467AC38EB440DDA1E26EE8FBCDD8326951B67C7461C3912FEAB8DEB7A7C2BA59&platform=2';
+          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0532ifzplw&auto=0';
+          videoUrl = 'https://v.qq.com/x/page/v0532ifzplw.html';
         }
-        layer.open({
-          type: 2,
-          title: false,
-          area: ['7rem', '4.6rem'],
-          shade: 0.8,
-          closeBtn: 0,
-          shadeClose: true,
-          content: videoUrl,
-        });
+        // layer.open({
+        //   type: 2,
+        //   title: false,
+        //   area: ['7rem', '4.6rem'],
+        //   shade: 0.8,
+        //   closeBtn: 0,
+        //   shadeClose: true,
+        //   content: videoUrl,
+        // });
+        window.location.href = videoUrl;
       }
     )
     $("#checkMsg").click(function(){
