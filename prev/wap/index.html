@@ -76,7 +76,7 @@
     </div> -->
     <div class="part_3" id="part_3">
         <img src="images/part_3_title_15.png" alt="" class="title">
-        <div class="rightForm" type="#part_3">
+        <!-- <div class="rightForm" type="#part_3">
             <ul>
                 <li><input type="text" id="name" value="姓名" maxlength="20"></li>
                 <li style="margin-left: 10px;"><input type="text" id="phone" value="电话" maxlength="11"></li>
@@ -94,9 +94,10 @@
                 </li>
             </ul>
         </div>
-        <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2">
+        <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2"> -->
     </div>
-    <!-- <div class="part_4" id="part_4">
+    <!-- 易车 -->
+    <div class="part_4" id="part_4">
         <img src="images/part_4_title_03.png" alt="" class="title">
         <div class="text">
             <p>
@@ -112,8 +113,27 @@
                 &nbsp; &nbsp;前200名用户可获得50元话费
             </p>
         </div>
+        <div class="rightForm" type="#part_3">
+            <ul>
+                <li><input type="text" id="name" value="姓名" maxlength="20"></li>
+                <li style="margin-left: 10px;"><input type="text" id="phone" value="电话" maxlength="11"></li>
+                <li>
+                    <select name="" id="pro" value="省"></select>
+                </li>
+                <li style="margin-left: 10px;">
+                    <select name="" id="city" value="市"></select>
+                </li>
+                <li style="width: 6rem;">
+                    <select name="" id="delear" value="" style="width:3.64rem"></select>
+                </li>
+                <li style="width: 77%;font-size:0.14rem" class="checkMsg">
+                    <label><input type="checkbox" name="userAgree" class="user_agree" id="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱对您提交的个人信息保密，不对外公开</span></label>
+                </li>
+            </ul>
+        </div>
+        <!-- <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2"> -->
         <div class="btn goBuy" index="3">立即抢购</div>
-    </div> -->
+    </div>
     <div class="context part_6" id="part_6">
         <div class="content">
             <img src="images/part_6_title_03.png" alt="" class="title">
@@ -416,7 +436,7 @@
         }
       }
     });
-    $("#part_3 .btn").click(function () {
+    $("#part_4 .btn").click(function () {
       sqmObj['1a'].call();
       if($("#userAgree").attr("checked")!='checked'){
         layer.alert("请勾选同意《用户信息保护及政策声明》");

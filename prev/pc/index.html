@@ -39,7 +39,7 @@
             <div class="logo"><img src="images/730logo_03.png" alt=""></div>
         </div>
     </div>
-    <!--第二屏-->
+    <!--留资-->
     <div class="context part_2" id="part_2">
         <div class="content">
             <div class="title"><img src="images/part_2_title_03.png" alt=""></div>
@@ -67,13 +67,15 @@
             </div>
         </div>
     </div>
+    <!-- 汽车之家 -->
     <div class="context part_3" id="part_3">
         <div class="content">
             <div class="title"><img src="images/part_3_title_15.png"></div>
-            <div class="btn goBuy" index="2"><img src="images/part_3_btn_03.png" alt=""></div>
+            <!-- <div class="btn goBuy" index="2"><img src="images/part_3_btn_03.png" alt=""></div> -->
         </div>
     </div>
-    <!-- <div class="context part_4" id="part_4">
+    <!-- 易车 -->
+    <div class="context part_4" id="part_4">
         <div class="content">
             <div class="title"><img src="images/part_4_title_03.png"></div>
             <div class="text">
@@ -92,7 +94,7 @@
             </div>
             <div class="btn goBuy" index="3">立即抢购</div>
         </div>
-    </div> -->
+    </div>
     <div class="context part_6" id="part_6">
         <div class="content">
             <div class="title"><img src="images/part_6_title_03.png" alt=""></div>
@@ -283,21 +285,25 @@
           sqmObj[4].call();
           var videoUrl = '';
           if(swiper.activeIndex == 1){
-            videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=l0532d4s97h&auto=0';
+          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=l0532d4s97h&auto=0';
+            videoUrl = 'https://v.qq.com/x/page/l0532d4s97h.html';
           }else if(swiper.activeIndex == 2){
-            videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=k0532t6x5w0&auto=0';
+            // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=k0532t6x5w0&auto=0';
+            videoUrl = 'https://v.qq.com/x/page/k0532t6x5w0.html';
           }else if(swiper.activeIndex == 0){
-            videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0532ifzplw&auto=0';
+            // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0532ifzplw&auto=0';
+            videoUrl = 'https://v.qq.com/x/page/v0532ifzplw.html';
           }
-          layer.open({
-            type: 2,
-            title: false,
-            area: ['1000px', '680px'],
-            shade: 0.8,
-            closeBtn: 1,
-            shadeClose: true,
-            content: videoUrl,
-          });
+          // layer.open({
+          //   type: 2,
+          //   title: false,
+          //   area: ['1000px', '680px'],
+          //   shade: 0.8,
+          //   closeBtn: 1,
+          //   shadeClose: true,
+          //   content: videoUrl,
+          // });
+          window.open(videoUrl);
         }
       )
 
