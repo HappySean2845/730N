@@ -76,7 +76,7 @@
     </div> -->
     <div class="part_3" id="part_3">
         <img src="images/part_3_title_15.png" alt="" class="title">
-        <!-- <div class="rightForm" type="#part_3">
+        <div class="rightForm" type="#part_3">
             <ul>
                 <li><input type="text" id="name" value="姓名" maxlength="20"></li>
                 <li style="margin-left: 10px;"><input type="text" id="phone" value="电话" maxlength="11"></li>
@@ -94,10 +94,10 @@
                 </li>
             </ul>
         </div>
-        <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2"> -->
+        <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2">
     </div>
     <!-- 易车 -->
-    <div class="part_4" id="part_4">
+    <!-- <div class="part_4" id="part_4">
         <img src="images/part_4_title_03.png" alt="" class="title">
         <div class="text">
             <p>
@@ -131,9 +131,9 @@
                 </li>
             </ul>
         </div>
-        <!-- <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2"> -->
+        <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2">
         <div class="btn goBuy" index="3">立即抢购</div>
-    </div>
+    </div> -->
     <div class="context part_6" id="part_6">
         <div class="content">
             <img src="images/part_6_title_03.png" alt="" class="title">
@@ -436,7 +436,7 @@
         }
       }
     });
-    $("#part_4 .btn").click(function () {
+    $("#part_3 .btn").click(function () {
       sqmObj['1a'].call();
       if($("#userAgree").attr("checked")!='checked'){
         layer.alert("请勾选同意《用户信息保护及政策声明》");
