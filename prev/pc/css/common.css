@@ -26,6 +26,10 @@ body .pc.container .context .content{
     line-height: 18px;
     text-align: center;
 }
+#part_6{
+    height:720px;
+    background: url(../images/part6_bg.jpg) center no-repeat;
+}
 #part_6 .prev{
     float: left;
     cursor: pointer;
@@ -42,10 +46,6 @@ body .pc.container .context .content{
 #part_6 .swiper-container .swiper-slide{
     height: 423px;
     width: 744px;
-}
-#part_6{
-    height:720px;
-    background: none;
 }
 #part_6 .title{
     width:289px;
