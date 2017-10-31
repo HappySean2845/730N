@@ -59,7 +59,7 @@
               <label><input type="checkbox" id="userAgree"> <span id="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱将对您提交的个人信息保密，不对外公开</span></label>
           </li>
           <li style="width: 100%;" class="confirmBtn">
-              <div class="btn">抢险预约</div>
+              <div class="btn">抢先预约</div>
           </li>
       </ul>
     </div>
@@ -77,9 +77,9 @@
         </div>
     </div>
     <!-- 易车 -->
-    <!-- <div class="context part_4" id="part_4">
+    <div class="context part_4" id="part_4">
         <div class="content">
-            <div class="title"><img src="images/part_4_title_03.png"></div>
+            <!-- <div class="title"><img src="images/part_4_title_03.png"></div>
             <div class="text">
                 <p>
                     1.1元抢拍全新9.58w全新宝骏730，原价88折封顶
@@ -94,9 +94,9 @@
                     &nbsp; &nbsp;前200名用户可获得50元话费
                 </p>
             </div>
-            <div class="btn goBuy" index="3">立即抢购</div>
+            <div class="btn goBuy" index="3">立即抢购</div> -->
         </div>
-    </div> -->
+    </div>
     <div class="context part_6" id="part_6">
         <div class="content">
             <!-- <div class="title"><img src="images/part_6_title_031.png" alt=""></div> -->
@@ -113,6 +113,7 @@
                     </div>
                 </div>
             </div> -->
+            <img src="images/play.png" class="play">
             <div class="big_video">
               <img src="images/swiper_1.jpg">
             </div>
@@ -316,15 +317,20 @@
       //     window.open(videoUrl);
       //   }
       // )
+      // 视频
       var video_index = 0,video_url = ['https://v.qq.com/x/page/v0532ifzplw.html','https://v.qq.com/x/page/l0532d4s97h.html','https://v.qq.com/x/page/k0532t6x5w0.html'];
       $('.video_bar .content img').click(function(){
         console.log('图片顺序',$(this).index());
         $('.big_video img').attr('src',$(this).attr('src'));
-        video_indx = $(this).index();
+        video_index = $(this).index();
       })
       $('.big_video img').click(function(){
         sqmObj[4].call()
-        window.open(video_url[video_indx]);
+        window.open(video_url[video_index]);
+      })
+      $('.play').click(function(){
+        sqmObj[4].call()
+        window.open(video_url[video_index]);
       })
 
       $("#checkMsg").click(function(){
@@ -424,7 +430,7 @@
           }
         }
       });
-      $("#part_2 .btn").click(function () {
+      $(".confirmBtn .btn").click(function () {
         sqmObj['1a'].call();
         if($("#userAgree").attr("checked")!='checked'){
           layer.alert("请勾选同意《用户信息保护及政策声明》");

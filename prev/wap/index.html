@@ -46,10 +46,10 @@
 <div class="Container">
     <div class="part_1" id="part_1">
         <!-- <img src="images/part1_text_03.png" alt="" class="text"> -->
-        <img src="images/730logo_03.png" alt="" class="logo">
+        <!-- <img src="images/730logo_03.png" alt="" class="logo"> -->
     </div>
-    <!-- <div class="part_2" id="part_2">
-        <div class="title">
+    <div class="part_2" id="part_2">
+        <!-- <div class="title">
             <img src="images/part_2_title_03.png" alt="">
         </div>
         <div class="rightForm">
@@ -72,33 +72,31 @@
                     <div class="btn">立即提交</div>
                 </li>
             </ul>
-        </div>
-    </div> -->
+        </div> -->
+    </div>
     <div class="part_3" id="part_3">
-        <img src="images/part_3_title_15.png" alt="" class="title">
+        <!-- <img src="images/part_3_title_15.png" alt="" class="title"> -->
         <div class="rightForm" type="#part_3">
-            <ul>
+            <div class="left_top_arrow"></div>
+            <div class="title">活动即将开启</div>
+            <ul class="clearfix">
                 <li><input type="text" id="name" value="姓名" maxlength="20"></li>
-                <li style="margin-left: 10px;"><input type="text" id="phone" value="电话" maxlength="11"></li>
-                <li>
-                    <select name="" id="pro" value="省"></select>
+                <li style="margin-left:0.1rem"><input type="text" id="phone" value="电话" maxlength="11"></li>
+                <li><select name="" id="pro" value="省"></select></li>
+                <li style="margin-left:0.1rem"><select name="" id="city" value="市"></select></li>
+                <li><select name="" id="delear" value=""></select></li>
+                <li class="checkMsg">
+                    <label><input type="checkbox" name="userAgree" class="user_agree" id="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱将对您提交的个人信息保密，不对外公开</span></label>
                 </li>
-                <li style="margin-left: 10px;">
-                    <select name="" id="city" value="市"></select>
-                </li>
-                <li style="width: 6rem;">
-                    <select name="" id="delear" value="" style="width:5.6rem;"></select>
-                </li>
-                <li style="width: 100%" class="checkMsg">
-                    <label><input type="checkbox" name="userAgree" class="user_agree" id="userAgree"> <span name="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
-                </li>
+                <li class="btn">抢先预约</li>
             </ul>
+            <div class="hint">活动开启后，将以短信形式第一时间通知您！<br>本活动最终解释权归上汽通用五菱宝骏汽车股份有限公司</div>
         </div>
         <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2">
     </div>
     <!-- 易车 -->
-    <!-- <div class="part_4" id="part_4">
-        <img src="images/part_4_title_03.png" alt="" class="title">
+    <div class="part_4" id="part_4"></div>
+       <!--  <img src="images/part_4_title_03.png" alt="" class="title">
         <div class="text">
             <p>
                 1.1元抢拍全新9.58w全新宝骏730，原价88折封顶
@@ -132,31 +130,26 @@
             </ul>
         </div>
         <img type="#part_3" src="images/part_3_btn_03.png" alt="" class="btn goBuy" index="2">
-        <div class="btn goBuy" index="3">立即抢购</div>
-    </div> -->
+        <div class="btn goBuy" index="3">立即抢购</div> -->
+    <div class="part_5"></div>
     <div class="context part_6" id="part_6">
-        <div class="content">
-            <img src="images/part_6_title_03.png" alt="" class="title">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="images/swiper_1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/swiper_2.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/swiper_3.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="btn" style="margin-top: 0.26rem;">
-                <img src="images/part_6_prev_10.png" alt="" class="prev">
-                <img src="images/part_6_next_11.png" alt="" class="next">
-            </div>
+       <div class="content" style="height:5rem">
+          <img src="images/play.png" class="play">
+          <div class="big_video">
+            <img src="images/swiper_1.jpg">
+          </div>
+          <img src="images/part_6_prev_10.png" alt="" class="prev">
+          <img src="images/part_6_next_11.png" alt="" class="next">
+        </div>
+        <div class="video_bar clearfix">
+          <div class="content">
+            <img style="margin-left:.75rem" src="images/swiper_1.jpg" alt="">
+            <img src="images/swiper_2.jpg" alt="">
+            <img src="images/swiper_3.jpg" alt="">
+          </div>
         </div>
     </div>
-    <div class="context part_5" id="part_5" style="overflow: hidden;">
+    <!-- <div class="context part_5" id="part_5" style="overflow: hidden;">
         <div class="content">
             <img src="images/part_5_title_03.png" class="title" alt="">
             <div class="descContent">
@@ -181,7 +174,8 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
+    <div class="part_7"></div>
     <div class="context part_bottom" id="part_bottom" style="overflow: hidden;">
         <img src="images/part_bottom_da_02.jpg" alt="">
     </div>
@@ -322,32 +316,46 @@
       }
       window.open(url);
     })
-    $(".swiper-container .swiper-slide").click(
-      function () {
-        sqmObj[4].call();
-        var videoUrl = '';
-        if(swiper.activeIndex == 1){
-          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=l0532d4s97h&auto=0';
-          videoUrl = 'https://v.qq.com/x/page/l0532d4s97h.html';
-        }else if(swiper.activeIndex == 2){
-          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=k0532t6x5w0&auto=0';
-          videoUrl = 'https://v.qq.com/x/page/k0532t6x5w0.html';
-        }else if(swiper.activeIndex == 0){
-          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0532ifzplw&auto=0';
-          videoUrl = 'https://v.qq.com/x/page/v0532ifzplw.html';
-        }
-        // layer.open({
-        //   type: 2,
-        //   title: false,
-        //   area: ['7rem', '4.6rem'],
-        //   shade: 0.8,
-        //   closeBtn: 0,
-        //   shadeClose: true,
-        //   content: videoUrl,
-        // });
-        window.location.href = videoUrl;
-      }
-    )
+    var video_index = 0,video_url = ['https://v.qq.com/x/page/v0532ifzplw.html','https://v.qq.com/x/page/l0532d4s97h.html','https://v.qq.com/x/page/k0532t6x5w0.html'];
+    $('.video_bar .content img').click(function(){
+      console.log('图片顺序',$(this).index());
+      $('.big_video img').attr('src',$(this).attr('src'));
+      video_index = $(this).index();
+    })
+    $('.big_video img').click(function(){
+      sqmObj[4].call()
+      window.open(video_url[video_index]);
+    })
+    $('.play').click(function(){
+      sqmObj[4].call()
+      window.open(video_url[video_index]);
+    })
+    // $(".swiper-container .swiper-slide").click(
+    //   function () {
+    //     sqmObj[4].call();
+    //     var videoUrl = '';
+    //     if(swiper.activeIndex == 1){
+    //       // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=l0532d4s97h&auto=0';
+    //       videoUrl = 'https://v.qq.com/x/page/l0532d4s97h.html';
+    //     }else if(swiper.activeIndex == 2){
+    //       // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=k0532t6x5w0&auto=0';
+    //       videoUrl = 'https://v.qq.com/x/page/k0532t6x5w0.html';
+    //     }else if(swiper.activeIndex == 0){
+    //       // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0532ifzplw&auto=0';
+    //       videoUrl = 'https://v.qq.com/x/page/v0532ifzplw.html';
+    //     }
+    //     // layer.open({
+    //     //   type: 2,
+    //     //   title: false,
+    //     //   area: ['7rem', '4.6rem'],
+    //     //   shade: 0.8,
+    //     //   closeBtn: 0,
+    //     //   shadeClose: true,
+    //     //   content: videoUrl,
+    //     // });
+    //     window.location.href = videoUrl;
+    //   }
+    // )
     $("#checkMsg").click(function(){
       layer.open({
         title:"用户信息保护及对策声明",

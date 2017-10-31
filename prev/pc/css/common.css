@@ -26,7 +26,6 @@ body .pc.container .context .content{
     line-height: 18px;
     text-align: center;
 }
-
 #part_4 .btn{
     width:212px;
     height:48px;
@@ -56,8 +55,8 @@ body .pc.container .context .content{
     margin-left:55px;
 }
 #part_4{
-    height:431px;
-    background-image: url("../images/part_4_bg_02.jpg");
+    height:722px;
+    background-image: url("../images/part_4_bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -222,6 +221,7 @@ body .pc.container .context .content{
 #part_6{
     height:625px;
     background-color:#fff;
+    position:relative;
 }
 #part_6 .prev{
     position:relative;
@@ -253,6 +253,12 @@ body .pc.container .context .content{
 #part_6 .big_video{
     margin:45px auto 77px;
 }
+#part_6 .play{
+    position:absolute;
+    cursor:pointer;
+    left: 47%;
+    top: 35%;
+}
 #part_6 .big_video img{
     width:893px;
     box-shadow: 2px 2px 10px rgba(0,0,0,.5);
@@ -283,6 +289,7 @@ body .pc.container .context .content{
     right:20%;
     top:30%;
     overflow:hidden;
+    z-index: 2;
 }
 .fix_form .left_top_arrow{
     width: 0;
@@ -316,6 +323,7 @@ body .pc.container .context .content{
     font-weight:bold;
 }
 .fix_form li .btn{
+    cursor:pointer;
     width:160px;
     height:38px;
     color: #ffffff;
