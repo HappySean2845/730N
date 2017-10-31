@@ -41,7 +41,9 @@
     </div>
     <!--留资-->
     <div class="fix_form">
-      <ul>
+      <div class="left_top_arrow"></div>
+      <div class="title">活动即将开启</div>
+      <ul class="clearfix">
           <li><input type="text" id="name" value="姓名" maxlength="20"></li>
           <li style="margin-left: 10px;"><input type="text" id="phone" value="电话" maxlength="11"></li>
           <li>
@@ -54,10 +56,10 @@
               <select name="" id="delear" value=""></select>
           </li>
           <li style="width: 100%" class="checkMsg">
-              <label><input type="checkbox" id="userAgree"> <span id="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱 <br>将对您提交的个人信息保密，不对外公开</span></label>
+              <label><input type="checkbox" id="userAgree"> <span id="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱将对您提交的个人信息保密，不对外公开</span></label>
           </li>
           <li style="width: 100%;" class="confirmBtn">
-              <div class="btn">立即提交</div>
+              <div class="btn">抢险预约</div>
           </li>
       </ul>
     </div>
@@ -288,32 +290,42 @@
         }
         window.open(url);
       })
-      $(".swiper-container .swiper-slide").click(
-        function () {
-          sqmObj[4].call();
-          var videoUrl = '';
-          if(swiper.activeIndex == 1){
-          // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=l0532d4s97h&auto=0';
-            videoUrl = 'https://v.qq.com/x/page/l0532d4s97h.html';
-          }else if(swiper.activeIndex == 2){
-            // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=k0532t6x5w0&auto=0';
-            videoUrl = 'https://v.qq.com/x/page/k0532t6x5w0.html';
-          }else if(swiper.activeIndex == 0){
-            // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0532ifzplw&auto=0';
-            videoUrl = 'https://v.qq.com/x/page/v0532ifzplw.html';
-          }
-          // layer.open({
-          //   type: 2,
-          //   title: false,
-          //   area: ['1000px', '680px'],
-          //   shade: 0.8,
-          //   closeBtn: 1,
-          //   shadeClose: true,
-          //   content: videoUrl,
-          // });
-          window.open(videoUrl);
-        }
-      )
+      // $(".swiper-container .swiper-slide").click(
+      //   function () {
+      //     sqmObj[4].call();
+      //     var videoUrl = '';
+      //     if(swiper.activeIndex == 1){
+      //     // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=l0532d4s97h&auto=0';
+      //       videoUrl = 'https://v.qq.com/x/page/l0532d4s97h.html';
+      //     }else if(swiper.activeIndex == 2){
+      //       // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=k0532t6x5w0&auto=0';
+      //       videoUrl = 'https://v.qq.com/x/page/k0532t6x5w0.html';
+      //     }else if(swiper.activeIndex == 0){
+      //       // videoUrl = 'https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0532ifzplw&auto=0';
+      //       videoUrl = 'https://v.qq.com/x/page/v0532ifzplw.html';
+      //     }
+      //     // layer.open({
+      //     //   type: 2,
+      //     //   title: false,
+      //     //   area: ['1000px', '680px'],
+      //     //   shade: 0.8,
+      //     //   closeBtn: 1,
+      //     //   shadeClose: true,
+      //     //   content: videoUrl,
+      //     // });
+      //     window.open(videoUrl);
+      //   }
+      // )
+      var video_index = 0,video_url = ['https://v.qq.com/x/page/v0532ifzplw.html','https://v.qq.com/x/page/l0532d4s97h.html','https://v.qq.com/x/page/k0532t6x5w0.html'];
+      $('.video_bar .content img').click(function(){
+        console.log('图片顺序',$(this).index());
+        $('.big_video img').attr('src',$(this).attr('src'));
+        video_indx = $(this).index();
+      })
+      $('.big_video img').click(function(){
+        sqmObj[4].call()
+        window.open(video_url[video_indx]);
+      })
 
       $("#checkMsg").click(function(){
         layer.open({

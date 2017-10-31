@@ -137,7 +137,7 @@ body .pc.container .context .content{
     width: 206px;
     height:36px;
     line-height: 36px;
-    border: 1px solid #8f8f8f;
+    /*border: 1px solid #8f8f8f;*/
     color: #8f8f8f;
     -webkit-border-radius:4px;
     -moz-border-radius:4px;
@@ -275,15 +275,40 @@ body .pc.container .context .content{
 
 /*浮动表单*/
 .fix_form{
-    float: right;
-    width:512px;
-    margin-right:8px;
-    margin-top:45px;
+    position:fixed;
+    width:380px;
+    height:380px;
+    border-radius:7px;
+    background-color:#e9472d;
+    right:20%;
+    top:30%;
+    overflow:hidden;
+}
+.fix_form .left_top_arrow{
+    width: 0;
+    height: 0;
+    border-top: 30px solid #333333;
+    border-right: 30px solid transparent;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.fix_form .title{
+    font-size:26px;
+    font-weight:bold;
+    text-align:center;
+    width:100%;
+    margin:35px 0;
+    color:#fff;
+}
+.fix_form ul{
+    margin:0 auto;
+    width:340px;
 }
 .fix_form li{
     float: left;
-    width:208px;
-    margin-bottom:16px;
+    /*width:208px;*/
+    margin-bottom:12px;
 }
 .fix_form li.checkMsg{
     font-size:14px;
@@ -291,18 +316,16 @@ body .pc.container .context .content{
     font-weight:bold;
 }
 .fix_form li .btn{
-    width:108px;
+    width:160px;
     height:38px;
     color: #ffffff;
     font-weight:bold;
     text-align: center;
     line-height:38px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    background: #c38c64;
-    float: right;
-    margin-right:86px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    background: #333333;
+    margin:0 auto;
 }
 .fix_form input[type='checkbox']{
     /*vertical-align: -1px;*/
@@ -317,14 +340,13 @@ body .pc.container .context .content{
     background-image: url(../images/check_on_21.png);
 }
 .fix_form input[type='text'],select,input[type='phone']{
-    width: 206px;
+    width: 165px;
     height:36px;
     line-height: 36px;
-    border: 1px solid #8f8f8f;
-    color: #8f8f8f;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
+    color: #000;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
     font-weight:bold;
     padding-left:10px;
     background: #ffffff;
@@ -338,5 +360,5 @@ body .pc.container .context .content{
     background-repeat: no-repeat;
 }
 .fix_form #delear{
-    width:424px;
+    width:340px;
 }
