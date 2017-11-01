@@ -311,6 +311,7 @@
     width:.18rem;
     height:.18rem;
     background-image: url(../images/check_off_21.png);
+    background-size: 0.18rem 0.18rem;
 }
 #part_3 .rightForm input[type='checkbox']:checked{
     background-image: url(../images/check_on_21.png);
