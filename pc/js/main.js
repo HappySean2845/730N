@@ -22,10 +22,10 @@
               gsTracker.setEcomProperty(orderid, "1", name);
               gsTracker.setEcomProperty(orderid, "2", mobile);
               gsTracker.setEcomProperty(orderid, "3", "宝骏730");
-              gsTracker.setEcomProperty(orderid, "4", $("#pro option:selected").val());
-              gsTracker.setEcomProperty(orderid, "5", $("#city option:selected").val());
-              gsTracker.setEcomProperty(orderid, "6", $("#delear option:selected").val());
-              gsTracker.addProduct(orderid, location.pathname, location.pathname, 1,1, "宝骏730的N种可能");
+              gsTracker.setEcomProperty(orderid, "4", $(".pro option:selected").val());
+              gsTracker.setEcomProperty(orderid, "5", $(".city option:selected").val());
+              gsTracker.setEcomProperty(orderid, "6", $(".dealer option:selected").val());
+              gsTracker.addProduct(orderid, location.pathname, location.pathname, 1,1, "宝骏730置换补贴");
               //此处可以根据活动页面实际title进行更换；
               gsTracker.trackECom();
               gsTracker.track("/targetpage/formsubmit/sqtywlpc");
@@ -235,16 +235,6 @@
             city.append('<option sid=' + cicyData[i].cityID + '>' + cicyData[i].cityName + '</option>');
           }
         }
-
-        // // var _id = $(".city option:selected").attr("sid");
-        // var _id = city.find('option:selected').attr('sid');
-        // dealer.empty();
-        // dealer.append('<option sid="-1">经销商</option>');
-        // for (var i = 0; i < WuLingdealers.length; i++) {
-        //   if (WuLingdealers[i].city == _id) {
-        //     dealer.append('<option sid=' + WuLingdealers[i].dealerCode + '>' + WuLingdealers[i].company + '</option>');
-        //   }
-        // }
       });
 
       $(".city").change(function(event) {
@@ -276,39 +266,50 @@
       $(".phone").blur(function () {
         if($(this).val()=="") $(this).val("电话");
       })
+      //获取验证码
+      $('.get_vcode').click(function(){
+
+      })
       //提交留资
-      $(".confirmBtn .btn").click(function () {
+      $(".submit").click(function () {
         sqmObj['1a'].call();
-        if($("#userAgree").attr("checked")!='checked'){
+        var name     = $(this).parent().parent().find('.name').val();
+        var tel      = $(this).parent().parent().find('.phone').val();
+        var vcode    = $(this).parent().parent().find('.vcode').val();
+        var province = $(this).parent().parent().find('.pro option:selected').text();
+        var city     = $(this).parent().parent().find('.city option:selected').text();
+        var dealer   = $(this).parent().parent().find('.dealer option:selected').text();
+        var checked  = $(this).parent().parent().find('.userAgree').attr('checked');
+        console.log(name,tel,province,city,dealer,checked);return;
+        if(checked!='checked'){
           layer.alert("请勾选同意《用户信息保护及政策声明》");
           return false;
         };
-          var name = $("#name").val();
-          if (!validate.isEmpty(name)) {
-            layer.alert("请输入姓名");
-            return false;
-          }
-          var tel = $("#phone").val();
-          if (!validate.isMobile(tel)) {
-            layer.alert("请输入正确的手机号码");
-            return false;
-          }
-          var province = $("#pro option:selected").text();
-          if (province == "请选择") {
-            layer.alert("请选择省份");
-            return false;
-          }
-          var city = $("#city option:selected").text();
-          if (city == "请选择") {
-            layer.alert("请选择城市");
-            return false;
-          }
-          var delear = $("#delear option:selected").text();
-          if (delear == "请选择") {
-            layer.alert("请选择经销商");
-            return false;
-          }
-          addInfo(name, tel, $("#pro option:selected").attr('sid'), $("#city option:selected").attr('sid'), $("#delear option:selected").attr('sid'))
+        if (!validate.isEmpty(name)) {
+          layer.alert("请输入姓名");
+          return false;
+        }
+        if (!validate.isMobile(tel)) {
+          layer.alert("请输入正确的手机号码");
+          return false;
+        }
+        if (!validate.isEmpty(vcode)) {
+          layer.alert("请输入验证码");
+          return false;
+        }
+        if (province == "请选择") {
+          layer.alert("请选择省份");
+          return false;
+        }
+        if (city == "请选择") {
+          layer.alert("请选择城市");
+          return false;
+        }
+        if (dealer == "请选择") {
+          layer.alert("请选择经销商");
+          return false;
+        }
+        addInfo(name, tel, $("#pro option:selected").attr('sid'), $("#city option:selected").attr('sid'), $("#dealer option:selected").attr('sid'))
       })
       var validate = {
         isEmpty: function (val) {
@@ -328,6 +329,11 @@
             return true;
           }
         },
+        vcode : function(val){
+          if(val!=localStorage.get('temp_vcode')){
+            return false;
+          }
+        }
       }
       function addInfo(_name, _tel, _province, _city, _dealer) {
         clickFlag = false;
