@@ -32,7 +32,6 @@
 </head>
 <body>
 <div class="container pc">
-  <div class="mask"></div>
     <!--第一屏-->
     <div class="context part_1" id="part_1">
         <div class="content">
@@ -84,7 +83,7 @@
           <li style="width: 100%" class="checkMsg">
               <label><input type="checkbox" class="userAgree"> <span id="checkMsg">本人同意<《用户信息保护及政策声明》，上汽通用五菱将对您提交的个人信息保密，不对外公开</span></label>
           </li>
-          <li style="width: 100%;" class="confirmBtn"><div class="btn rule1">查看详细规则</div><div class="btn btn1 submit">立即提交</div></li>
+          <li style="width: 100%;" class="confirmBtn"><div class="btn rule rule1">查看详细规则</div><div class="btn btn1 submit">立即提交</div></li>
         </ul>
       </div>
     </div>
@@ -105,7 +104,7 @@
             </li>
             <li style="width: 100%;" class="confirmBtn">
               <div class="btn btn1 submit">立即提交</div>
-              <div class="btn rule1">活动规则</div>
+              <div class="btn rule rule2">活动规则</div>
               <div class="btn winner_list">中奖名单</div>
             </li>
           </ul>
@@ -197,22 +196,25 @@
             <img src="images/part_bottom_02.jpg" alt="">
         </div>
     </div>
-    <div class="hide">
-      <div class="popup click_close" id="popup_1"><img src="images/popup_1.png"></div>
-      <div class="popup click_close" id="popup_2"><img src="images/popup_2.png"></div>
-      <div class="popup click_close" id="popup_cookie_not"><img src="images/popup_cookie_not.png"></div>
-      <div class="popup click_close" id="popup_cookie_win"><img src="images/popup_cookie_win.png"></div>
-      <div class="popup"><img src="images/popup_cookie_win.png"></div>
-      <div class="popup"><img src="images/popup_win.png"></div>
-      <div class="vcode_input">
+    <div class="mask">
+      <div class="popup click_close" id="popup_1"></div>
+      <div class="popup click_close" id="popup_2"></div>
+      <div class="popup" id="popup_cookie_not"></div>
     </div>
-
+    <div class="hide" id="popup_cookie_win">
+      <div class="content">
+        <input type="text" placeholder="姓名" class="name">
+        <input type="text" placeholder="手机号码" class="phone">
+        <input type="text" placeholder="身份证号码" class="id_number">
+        <div class="btn">立即领取</div>
+        <div class="close"></div>
+      </div>
     </div>
+    <div class="hide" id="popup_win"></div>
+    <div class="hide vcode_input">
 </div>
 <script type="text/javascript" src="js/md5.js"></script>
-<script type="text/javascript" src="js/province.js"></script>
-<script type="text/javascript" src="js/city.js"></script>
-<script type="text/javascript" src="js/730dealer.js"></script>
+<script type="text/javascript" src="http://www.sgmw.com.cn/js/730dealer.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </body>

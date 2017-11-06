@@ -20,6 +20,7 @@ body .pc.container .context .content{
 .layui-layer-demo .layui-layer-content{
     padding:20px;
 }
+.layui-layer{box-shadow: none;}
 .click_close img{width:100%;}
 #part_bottom{
     width: 100%;
@@ -398,6 +399,7 @@ body .pc.container .context .content{
     display: block;
     margin-left: 82px;
     margin-top: 301px;
+    cursor:pointer;
 }
 #part_3 .get_vcode{
     background-color:#c3623e;
@@ -406,7 +408,7 @@ body .pc.container .context .content{
     margin-left:0;
     background-color:#c3623e;
 }
-#part_3 .rule1,#part_3 .winner_list{
+#part_3 .rule,#part_3 .winner_list{
     margin-left:20px;
     background-color:#736357;
     width:116px;
@@ -438,7 +440,7 @@ body .pc.container .context .content{
     margin-left:30px;
     font-size:25px !important;
 }
-.submit_form .rule1{
+.submit_form .rule{
     width:170px;
     background-color:#4d4d4d;
     margin-left:70px;
@@ -494,3 +496,64 @@ body .pc.container .context .content{
 .submit_form .copyright{
     /*margin-bottom:40px;*/
 }
+.mask{
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.4);
+    display:none;
+    width:100%;height:100%;
+}
+.mask .popup{
+    width:100%;height:100%;
+}
+#popup_1{
+    background:url('../images/popup_1.png') center no-repeat;
+    background-size:600px;
+}
+#popup_2{
+    background:url('../images/popup_2.png') center no-repeat;
+    background-size:600px;
+}
+#popup_cookie_not{
+    background:url('../images/popup_2.png') center no-repeat;
+    background-size:600px;
+}
+#popup_cookie_win{
+    position: relative;
+    width:604px;height:583px;
+    background:url(../images/popup_cookie_win.png) center no-repeat;
+    overflow:hidden;
+}
+#popup_cookie_win .content>*{
+    width:326px;height:45px;
+    border-radius: 5px;
+}
+#popup_cookie_win .content{
+    width: 330px;
+    height: 221px;
+    margin: 242px 0 0 150px;
+}
+#popup_cookie_win input{
+    background:#fff;
+    padding-left:25px;
+    font-size:16px;color:#000;
+    margin:0 auto 7px;
+}
+#popup_cookie_win .btn{
+    text-align:center;
+    color:#fff;
+    line-height:42px;
+    font-weight:bold;
+    font-size:20px;
+    background:#e9472d;
+    margin-top:18px;
+    cursor:pointer;
+}
+#popup_cookie_win .close{
+    width:40px;height:40px;
+    position:absolute;
+    bottom: 32px;
+    left: 48%;
+}
+.mask>*{display:none;}
