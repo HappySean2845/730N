@@ -516,7 +516,7 @@ body .pc.container .context .content{
     background-size:600px;
 }
 #popup_cookie_not{
-    background:url('../images/popup_2.png') center no-repeat;
+    background:url('../images/popup_cookie_fail.png') center no-repeat;
     background-size:600px;
 }
 #popup_cookie_win{
@@ -555,5 +555,39 @@ body .pc.container .context .content{
     position:absolute;
     bottom: 32px;
     left: 48%;
+}
+#popup_win{
+    position:relative;
+    width:579px;height:844px;
+    background:url(../images/popup_win.png) center no-repeat;
+    background-size:100%;
+    overflow:hidden;
+}
+#popup_win .content{
+    width: 500px;
+    height: 300px;
+    margin: 395px 0 0 54px;
+}
+#popup_win .content input{
+    width:470px;height:63px;line-height:63px;
+    color:#fff;
+    background:rgba(0,0,0,.25);border-radius:5px;
+    padding-left:34px;
+    font-size:20px;
+    margin-bottom:12px;
+}
+#popup_win .content .btn{
+    width:472px;height:64px;line-height:64px;
+    color:#000;font-size:24px;font-weight:bold;
+    text-align:center;
+    background:#fdd22b;
+    border-radius: 5px;
+    margin-top:30px;
+}
+#popup_win .content .close{
+    position:absolute;
+    width:47px;height:47px;
+    right: 53px;
+    top: 53px;
 }
 .mask>*{display:none;}

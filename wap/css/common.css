@@ -5,6 +5,7 @@
 /**{*/
     /*font-size:0.24rem;*/
 /*}*/
+.hide{display:none;}
 .layui-layer-btn0{
     font-size:0.24rem!important;
 }
@@ -566,3 +567,103 @@
 .submit_form .copyright{
     font-size:0.16rem;
 }
+.mask{
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.4);
+    display:none;
+    width:100%;height:100%;
+}
+.mask .popup{
+    width:100%;height:100%;
+}
+#popup_1{
+    background:url('../images/popup_1.png') center no-repeat;
+    background-size:7rem;
+}
+#popup_2{
+    background:url('../images/popup_2.png') center no-repeat;
+    background-size:7rem;
+}
+#popup_cookie_not{
+    background:url('../images/popup_cookie_fail.png') center no-repeat;
+    background-size:7rem;
+}
+#popup_cookie_win{
+    position: relative;
+    width:7rem;height:7rem;
+    background:url(../images/popup_cookie_win.png) center no-repeat;
+    background-size:100%;
+    overflow:hidden;
+}
+#popup_cookie_win .content>*{
+    display:block;
+    width: 5rem;
+    height: .6rem;
+    border-radius: 0.05rem;
+}
+#popup_cookie_win .content{
+    width: 3.30rem;
+    height: 2.21rem;
+    margin: 2.52rem 0 0 1rem;
+}
+#popup_cookie_win input{
+    background:#fff;
+    padding-left:.25rem;
+    font-size:.16rem;color:#000;
+    margin:0 auto .07rem;
+}
+#popup_cookie_win .btn{
+    text-align:center;
+    color:#fff;
+    line-height:.56rem;
+    font-weight:bold;
+    font-size:.2rem;
+    background:#e9472d;
+    margin-top:.3rem;
+    cursor:pointer;
+}
+#popup_cookie_win .close{
+    width: .45rem;
+    height: .45rem;
+    position: absolute;
+    bottom: .46rem;
+    left: 47%;
+}
+#popup_win{
+    position:relative;
+    width:5.79rem;height:8.44rem;
+    background:url(../images/popup_win.png) center no-repeat;
+    background-size:100%;
+    overflow:hidden;
+}
+#popup_win .content{
+    width: 5rem;
+    height: 3rem;
+    margin: 3.95rem 0 0 .54rem;
+}
+#popup_win .content input{
+    display:block;
+    width:4.7rem;height:.63rem;line-height:.63rem;
+    color:#fff;
+    background:rgba(0,0,0,.25);border-radius:.05rem;
+    padding-left:.34rem;
+    font-size:.20rem;
+    margin-bottom:.12rem;
+}
+#popup_win .content .btn{
+    width:4.72rem;height:.64rem;line-height:.64rem;
+    color:#000;font-size:.24rem;font-weight:bold;
+    text-align:center;
+    background:#fdd22b;
+    border-radius: .05rem;
+    margin-top:.3rem;
+}
+#popup_win .content .close{
+    position:absolute;
+    width:.47rem;height:.47rem;
+    right: .53rem;
+    top: .53rem;
+}
+.mask>*{display:none;}

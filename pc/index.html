@@ -203,17 +203,26 @@
     </div>
     <div class="hide" id="popup_cookie_win">
       <div class="content">
-        <input type="text" placeholder="姓名" class="name">
-        <input type="text" placeholder="手机号码" class="phone">
+        <input type="text" placeholder="姓名" class="name" readonly>
+        <input type="text" placeholder="手机号码" class="phone" readonly>
         <input type="text" placeholder="身份证号码" class="id_number">
-        <div class="btn">立即领取</div>
+        <div class="btn submit_tax">立即领取</div>
         <div class="close"></div>
       </div>
     </div>
-    <div class="hide" id="popup_win"></div>
+    <div class="hide" id="popup_win">
+      <div class="content">
+        <input type="text" class="name" readonly value="姓名">
+        <input type="text" class="phone" readonly value="电话">
+        <input type="text" class="id_number" value='身份证号码'>
+        <div class="btn submit_subsidy">立即领取</div>
+        <div class="close"></div>
+      </div>
+    </div>
     <div class="hide vcode_input">
 </div>
 <script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="http://www.sgmw.com.cn/js/730dealer.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
