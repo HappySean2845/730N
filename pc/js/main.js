@@ -153,6 +153,7 @@ $(function() {
   })
   //获取验证码
   $('.get_vcode').click(function() {
+    console.log('点击获取验证码')
     var tel = $(this).parent().parent().find('.phone').val();
     var _this = $(this);
     if (!validate.isMobile(tel)) {
@@ -160,25 +161,31 @@ $(function() {
       return false;
     }
     $.get(Config.url+'sms_send.php',
-      {mobile:tel},
-      function(data){
-        var count_down = 60;
-         _this.hide().next().show();
-        var t = setInterval(function(){
-          if(count_down>1){
-            _this.next().html(count_down--+'s');
-          }else{
-            clearInterval(t);
-            _this.show().next().hide();
-          }
-        },1000)
-        layer.alert('发送短信成功');
-        if(data=='success'){
-
+      {mobile:tel},function(data){
+        console.log('发送验证码返回',data);
+        if(Config.debug){
+          layer.alert('验证码为:'+data.vcode);
+        }else{
+          layer.alert('发送短信成功');
         }
-      }
+        if(data.status=='success'){
+          var count_down = 60;
+           _this.hide().next().show();
+          var t = setInterval(function(){
+            if(count_down>1){
+              _this.next().html(count_down--+'s');
+            }else{
+              clearInterval(t);
+              _this.show().next().hide();
+            }
+          },1000)
+        }else{
+          layer.alert(data.msg);
+        }
+      },'json'
     )
   })
+  var has_add_info = false;     //是否已经提交留资，用于点击饼干的判断
   //提交留资
   $(".submit").click(function() {
     var type = $(this).index();     //中奖类型0是下面那个1是上面那个
@@ -221,35 +228,112 @@ $(function() {
     }
     //验证验证码
     $.get(Config.url+'sms_verify.php',{mobile:tel,sms_code:vcode},function(data){
-      if(data=='success'){
+      console.log('验证短信验证码返回',data)
+      if(data.status=='success'){
         addInfo(name, tel, province, city, dealer)
         if(type==1){
-          $.get(Config.url+'reward.php',{mobile:tel,type:1},function(data){
-            if(data=='success'){
+          $.get(Config.url+'reward.php',{mobile:tel,type:1},function(res){
+            console.log('是否获奖接口返回',res)
+            if(res.status=='success'){
+              $('#popup_win .name').val(name);
+              $('#popup_win .phone').val(tel);
               layer.open({
                 type: 1,
                 title: false,
                 closeBtn: 0,
-                area: ['604px','583px'],
+                area: ['579px','844px'],
                 skin: 'layui-layer-nobg', //没有背景色
                 shadeClose: false,
                 content: $('#popup_win')
               });
+            }else{
+              layer.alert(res.msg)
             }
-          })
+          },'json')
+        }else{
+          has_add_info = true;
+          $('#part_3 .cookie').addClass('shrink');
+          layer.alert('请点击幸运饼干抽奖')
         }
+      }else{
+        layer.alert('验证码验证失败')
       }
-    })
+    },'json')
+  })
+  //点击饼干
+  $('#part_3 .cookie').click(function(){
+    var tel = $('#part_3 .phone').val();
+    var name = $('#part_3 .name').val();
+    $('#popup_cookie_win .name').val(name);
+    $('#popup_cookie_win .phone').val(tel);
+    if(has_add_info){
+      $.get(Config.url+'reward.php',{mobile:tel,type:2},function(data){
+        if(data.status=='success'){
+          layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['604px','583px'],
+            skin: 'layui-layer-nobg', //没有背景色
+            shadeClose: false,
+            content: $('#popup_cookie_win')
+          });
+        }else{
+          layer.alert(data.msg)
+        }
+      },'json')
+    }else{
+      layer.alert('请填写资料后再进行抽奖')
+    }
+  })
+  //点击置换补贴基金，6000的那个
+  $('.submit_subsidy').click(function(){
+    var id_card  = $(this).parent().find('.id_number').val();
+    var mobile   = $(this).parent().find('.phone').val();
+    var name     = $(this).parent().find('.name').val();
+    var province = $('#part_2').find('.pro option:selected').attr('sid');
+    var city     = $('#part_2').find('.city option:selected').attr('sid');
+    var dealer   = $('#part_2').find('.dealer option:selected').attr('sid');
+    var prize    = 1
+    console.log('身份证：',id_card);
+    if(validate.isId(id_card)){
+      saveUser(mobile,name,id_card);
+      lanmenAddUser(name,mobile,province,city,dealer,id_card,prize)
+    }else{
+      layer.alert('身份证号码不合法');
+    }
+  })
+  //点击提交购置税,每天10个的那个
+  $('.submit_tax').click(function(){
+    var id_card  = $(this).parent().find('.id_number').val();
+    var mobile   = $(this).parent().find('.phone').val();
+    var name     = $(this).parent().find('.name').val();
+    var province = $('#part_3').find('.pro option:selected').attr('sid');
+    var city     = $('#part_3').find('.city option:selected').attr('sid');
+    var dealer   = $('#part_3').find('.dealer option:selected').attr('sid');
+    var prize    = 1
+    console.log('身份证：',id_card);
+    if(validate.isId(id_card)){
+      saveUser(mobile,name,id_card);
+      lanmenAddUser(name,mobile,province,city,dealer,id_card,prize)
+    }else{
+      layer.alert('身份证号码不合法');
+    }
   })
   //信息入库
   function saveUser(mobile,name,id_card){
-    $.get(Config.url+'user.php',{
+    $.get(Config.url+'baojun730_tax.php',{
       mobile  : mobile,
       name    : name,
       id_card : id_card,
     },function(data){
-
-    })
+      if(data.status=='success'){
+        layer.closeAll();
+        layer.alert('提交成功！请等待短信通知！')
+      }else{
+        layer.alert('提交失败'+data);
+      }
+    },'json')
   }
   var validate = {
     isEmpty: function(val) {
@@ -305,12 +389,12 @@ $(function() {
       success: function(result) {
         var wr = result.success[0].result;
         if (wr == 1) {
-          layer.alert("预约成功");
+          // layer.alert("预约成功");
           _tel = _tel.substring(0, 3) + '****' + _tel.substring(7, 11)
           localStorage.submit_flag = true;
           sqmObj["1b"](_name, _tel, _province, _city, _dealer);
         } else if (wr == 2) {
-          layer.alert('您已预约成功,请勿重复提交');
+          // layer.alert('您已预约成功,');
         } else {
           layer.alert('预约失败，请稍后重试');
         }
@@ -326,3 +410,18 @@ $(function() {
       return "";
   }
 })
+//核销接口 przie 1是购置税2是置换基金
+function lanmenAddUser(name,phone,provid,cityid,dealer,idcardnum,prize){
+  console.log(arguments);return;
+  $.get('http://www.sgmw.com.cn/activities/20171109/ashx/AddUser.ashx',{
+    name:name,
+    phone:phone,
+    provid:provid,
+    cityid:cityid,
+    dealer:dealer,
+    idcardnum:idcardnum,
+    prize,prize,
+  },function(data){
+    console.log('核销接口返回',data);
+  },'json')
+}
