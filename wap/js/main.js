@@ -418,7 +418,9 @@ $(document).ready(function () {
 })
 //核销接口 przie 1是购置税2是置换基金
 function lanmenAddUser(name,phone,provid,cityid,dealer,idcardnum,prize){
-  console.log(arguments);return;
+  if(Config.debug){
+    console.log(arguments);return;
+  }
   $.get('http://www.sgmw.com.cn/activities/20171109/ashx/AddUser.ashx',{
     name:name,
     phone:phone,
