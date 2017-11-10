@@ -1,5 +1,8 @@
 
 $(document).ready(function () {
+  $('.close').click(function(){
+     layer.closeAll();
+  })
   var sqmObj = {
     "1a":function (){
       _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-submit']);
@@ -158,7 +161,7 @@ $(document).ready(function () {
       {mobile:tel},function(data){
         console.log('发送验证码返回',data);
         if(Config.debug){
-          layer.alert('验证码为:'+data.vcode)
+          layer.alert('验证码为:'+data.vcode);
         }else{
           layer.alert('发送短信成功');
         }
@@ -288,11 +291,10 @@ $(document).ready(function () {
     var province = $('#part_3').find('.pro option:selected').attr('sid');
     var city     = $('#part_3').find('.city option:selected').attr('sid');
     var dealer   = $('#part_3').find('.dealer option:selected').attr('sid');
-    var prize    = 1
+    var prize    = 2
     console.log('身份证：',id_card);
     if(validate.isId(id_card)){
-      saveUser(mobile,name,id_card);
-      lanmenAddUser(name,mobile,province,city,dealer,id_card,prize)
+      saveUser(mobile,name,id_card,province,city,dealer,prize);
     }else{
       layer.alert('身份证号码不合法');
     }
@@ -308,14 +310,13 @@ $(document).ready(function () {
     var prize    = 1
     console.log('身份证：',id_card);
     if(validate.isId(id_card)){
-      saveUser(mobile,name,id_card);
-      lanmenAddUser(name,mobile,province,city,dealer,id_card,prize)
+      saveUser(mobile,name,id_card,province,city,dealer,prize);
     }else{
       layer.alert('身份证号码不合法');
     }
   })
   //信息入库
-  function saveUser(mobile,name,id_card){
+  function saveUser(mobile,name,id_card,province,city,dealer,prize){
     $.get(Config.url+'baojun730_tax.php',{
       mobile  : mobile,
       name    : name,
@@ -324,8 +325,9 @@ $(document).ready(function () {
       if(data.status=='success'){
         layer.closeAll();
         layer.alert('提交成功！请等待短信通知！')
+        lanmenAddUser(name,mobile,province,city,dealer,id_card,prize)
       }else{
-        layer.alert('提交失败'+data);
+        layer.alert('提交失败'+data.msg);
       }
     },'json')
   }
@@ -396,7 +398,17 @@ $(document).ready(function () {
       }
     });
   }
-
+  $('.winner_list').click(function(){
+    layer.open({
+      type: 1,
+      title: false,
+      closeBtn: 0,
+      area: ['7rem','10rem'],
+      skin: 'layui-layer-nobg', //没有背景色
+      shadeClose: false,
+      content: $('#reward_list')
+    });
+  })
   function $_GET(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg);
@@ -406,7 +418,9 @@ $(document).ready(function () {
 })
 //核销接口 przie 1是购置税2是置换基金
 function lanmenAddUser(name,phone,provid,cityid,dealer,idcardnum,prize){
-  console.log(arguments);return;
+  if(Config.debug){
+    console.log(arguments);return;
+  }
   $.get('http://www.sgmw.com.cn/activities/20171109/ashx/AddUser.ashx',{
     name:name,
     phone:phone,

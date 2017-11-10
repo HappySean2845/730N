@@ -610,4 +610,29 @@ body .pc.container .context .content{
     right: 53px;
     top: 53px;
 }
+#reward_list{
+    width:468px;height:671px;
+    background:url('../images/reward_list.png');
+    background-size: 100%;
+    position:relative;
+    font-size:18px;
+    padding-top:155px;
+}
+#reward_list div{
+    text-align:center;
+    line-height:40px;
+}
+#reward_list div span{
+    margin:0 10px 0 5px;
+}
+#reward_list div i{
+    display:inline-block;
+    width:60px;
+    text-align:center;
+}
+#reward_list .close{
+    position:absolute;
+    top:22px;right:23px;
+    width:33px;height:33px;
+}
 .mask>*{display:none;}

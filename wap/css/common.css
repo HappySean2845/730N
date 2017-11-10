@@ -48,7 +48,7 @@
     width:4.8rem;
     margin: 0 auto;
     margin-top: 0.47rem;
-    /*margin-right:80px;*/
+    /*margin-right:80rem;*/
 }
 #part_5 .descContent .desc h2{
     font-size:0.37rem;
@@ -685,5 +685,32 @@
     width:.47rem;height:.47rem;
     right: .53rem;
     top: .53rem;
+}
+#reward_list{
+    width:7rem;height:10rem;
+    background:url('../images/reward_list.png');
+    background-size: 100%;
+    position:relative;
+    font-size:.18rem;
+    padding-top:1.9rem;
+}
+#reward_list div{
+    text-align:center;
+    line-height:.70rem;
+}
+#reward_list div span{
+    margin:0 .1rem 0 .05rem;
+}
+#reward_list div i{
+    display:inline-block;
+    width:.6rem;
+    text-align:center;
+}
+#reward_list .close{
+    position: absolute;
+    top: .22rem;
+    right: .23rem;
+    width: .6rem;
+    height: .6rem;
 }
 .mask>*{display:none;}
