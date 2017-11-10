@@ -162,6 +162,7 @@ $(function() {
     }
     $.get(Config.url+'sms_send.php',
       {mobile:tel},function(data){
+
         console.log('发送验证码返回',data);
         if(Config.debug){
           layer.alert('验证码为:'+data.vcode);
