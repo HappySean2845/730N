@@ -217,7 +217,7 @@ body .pc.container .context .content{
     margin-top: 10px;
 }
 .partBox{
-    margin-top: 40px; 
+    margin-top: 40px;
 }
 .pc2{
     width: 520px;
@@ -594,7 +594,19 @@ body .pc.container .context .content{
     background:url(../images/popup_cookie_win.png) center no-repeat;
     overflow:hidden;
 }
-#popup_cookie_win .content>*{
+#popup_cookie_win input::-webkit-input-placeholder{
+    color:#000;
+}
+#popup_cookie_win input:-moz-placeholder{
+    color:#000;
+}
+#popup_cookie_win input::-moz-placeholder{
+    color:#000;
+}
+#popup_cookie_win input:-ms-input-placeholder{
+    color:#000;
+}
+#popup_cookie_win .content>*:not(span){
     width:326px;height:45px;
     border-radius: 5px;
 }
@@ -608,6 +620,13 @@ body .pc.container .context .content{
     padding-left:25px;
     font-size:16px;color:#000;
     margin:0 auto 7px;
+}
+#popup_cookie_win .content span{
+    position:absolute;
+    right: 141px;
+    line-height: 45px;
+    font-size: 16px;
+    color: #e9472d;
 }
 #popup_cookie_win .btn{
     text-align:center;
@@ -625,12 +644,25 @@ body .pc.container .context .content{
     bottom: 32px;
     left: 48%;
 }
+
 #popup_win{
     position:relative;
     width:579px;height:844px;
     background:url(../images/popup_win.png) center no-repeat;
     background-size:100%;
     overflow:hidden;
+}
+#popup_win input::-webkit-input-placeholder{
+    color:#fff;
+}
+#popup_win input:-moz-placeholder{
+    color:#fff;
+}
+#popup_win input::-moz-placeholder{
+    color:#fff;
+}
+#popup_win input:-ms-input-placeholder{
+    color:#fff;
 }
 #popup_win .content{
     width: 500px;
@@ -644,6 +676,13 @@ body .pc.container .context .content{
     padding-left:34px;
     font-size:20px;
     margin-bottom:12px;
+}
+#popup_win .content span{
+    position:absolute;
+    right: 78px;
+    line-height: 60px;
+    font-size: 20px;
+    color: #fdd22b;
 }
 #popup_win .content .btn{
     width:472px;height:64px;line-height:64px;
