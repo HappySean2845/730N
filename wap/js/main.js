@@ -8,26 +8,69 @@ $(document).ready(function () {
       _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-submit']);
       _gsq.push(['T', 'GWD-002942', 'trackEvent', 'click', '点击提交表单wap',location.pathname]);
     },
-    "1b":function(name,mobile,province,city,leadsID){
-      _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-submitsuccess','{'+name+'_'+mobile+'_'+province+'_'+city+'_'+leadsID+'_'+'}']);
+    "1b": function(name, mobile, province, city, leadsID) {
+      _smq.push(['custom', '17-baojun', 'baojun730-millionPC-funds-submitsuccess', '{' + name + '_' + mobile + '_' + province + '_' + city + '_' + leadsID + '_' + '}']);
       var gsq_key = "sqtywl" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
-        if (window.gsTracker) {
-          var orderid = gsq_key;
-
-          gsTracker.addOrder(orderid, 1);
-          gsTracker.setEcomProperty(orderid, "1", name);
-          gsTracker.setEcomProperty(orderid, "2", mobile);
-          gsTracker.setEcomProperty(orderid, "3", "宝骏730");
-          gsTracker.setEcomProperty(orderid, "4", $(".pro option:selected").val());
-          gsTracker.setEcomProperty(orderid, "5", $(".city option:selected").val());
-          gsTracker.setEcomProperty(orderid, "6", $(".dealer option:selected").val());
-          gsTracker.addProduct(orderid, location.pathname, location.pathname, 1,1, "宝骏730置换补贴");
-          //此处可以根据活动页面实际title进行更换；
-          gsTracker.trackECom();
-          // gsTracker.track("/targetpage/formsubmit/sqtywlpc");
-          // 当为移动端时，请换成如下代码：
-          gsTracker.track("/targetpage/formsubmit/sqtywlwap");
-        }
+      if (window.gsTracker) {
+        var orderid = gsq_key;
+        gsTracker.addOrder(orderid, 1);
+        gsTracker.setEcomProperty(orderid, "1", name);
+        gsTracker.setEcomProperty(orderid, "2", mobile);
+        gsTracker.setEcomProperty(orderid, "3", "宝骏730");
+        gsTracker.setEcomProperty(orderid, "4", $(".pro").eq(0).val());
+        gsTracker.setEcomProperty(orderid, "5", $(".city").eq(0).val());
+        gsTracker.setEcomProperty(orderid, "6", $(".dealer").eq(0).val());
+        gsTracker.addProduct(orderid, location.pathname, location.pathname, 1, 1, "宝骏730置换补贴");
+        //此处可以根据活动页面实际title进行更换；
+        gsTracker.trackECom();
+        gsTracker.track("/targetpage/formsubmit/sqtywlpc");
+        // 当为移动端时，请换成如下代码：
+        // gsTracker.track("/targetpage/formsubmit/sqtywlwap");
+      }
+    },
+    "1c" : function(name, mobile, province, city, leadsID){
+      _smq.push(['custom', '17-baojun', 'baojun730-millionMB-freetax-submitsuccess', '{' + name + '_' + mobile + '_' + province + '_' + city + '_' + leadsID + '_' + '}']);
+      var gsq_key = "sqtywl" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
+      if (window.gsTracker) {
+        var orderid = gsq_key;
+        gsTracker.addOrder(orderid, 1);
+        gsTracker.setEcomProperty(orderid, "1", name);
+        gsTracker.setEcomProperty(orderid, "2", mobile);
+        gsTracker.setEcomProperty(orderid, "3", "宝骏730");
+        gsTracker.setEcomProperty(orderid, "4", $(".pro").eq(1).val());
+        gsTracker.setEcomProperty(orderid, "5", $(".city").eq(1).val());
+        gsTracker.setEcomProperty(orderid, "6", $(".dealer").eq(1).val());
+        gsTracker.addProduct(orderid, location.pathname, location.pathname, 1, 1, "宝骏730免购置税");
+        //此处可以根据活动页面实际title进行更换；
+        gsTracker.trackECom();
+        gsTracker.track("/targetpage/formsubmit/sqtywlpc");
+        // 当为移动端时，请换成如下代码：
+        // gsTracker.track("/targetpage/formsubmit/sqtywlwap");
+      }
+    },
+    "id1": function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-funds-pickup']);
+    },
+    "id2": function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-pickup']);
+    },
+    "freetax": function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-freetax-submit']);
+    },
+    "rule1" : function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-rule']);
+    },
+    "rule2" : function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-freetax-rule']);
+    },
+    "reward_list" : function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-luck-namelist']);
+    },
+    "cookie" : function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-biscuit']);
+    },
+    "get_cookie" : function(){
+      _smq.push(['custom','17-baojun','baojun730-millionMB-pickup']);
     },
     2:function(){
       _smq.push(['custom','17-baojun','baojun730-yiyuan-MB-QCZJhugerush']);
@@ -64,24 +107,48 @@ $(document).ready(function () {
   $('.rule1').click(function() {
     $('.mask').fadeIn();
     $('#popup_1').show();
+    sqmObj['rule1'].call();
   })
   $('.rule2').click(function() {
     $('.mask').fadeIn();
     $('#popup_2').show();
+    sqmObj['rule2'].call();
   })
-  var video_index = 0,video_url = ['https://v.qq.com/x/page/v0532ifzplw.html','https://v.qq.com/x/page/l0532d4s97h.html','https://v.qq.com/x/page/k0532t6x5w0.html'];
-  $('.video_bar .content img').click(function(){
-    console.log('图片顺序',$(this).index());
-    $('.big_video img').attr('src',$(this).attr('src'));
+  var video_index = 0,
+      video_url = ['<iframe frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=v0532ifzplw&tiny=0&auto=0" allowfullscreen></iframe>',
+       '<iframe frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=l0532d4s97h&tiny=0&auto=0" allowfullscreen></iframe>',
+        '<iframe frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=k0532t6x5w0&tiny=0&auto=0" allowfullscreen></iframe>'];
+
+  $('.video_bar .content img').click(function() {
+    console.log('图片顺序', $(this).index());
+    $('.big_video img').attr('src', $(this).attr('src'));
     video_index = $(this).index();
   })
-  $('.big_video img').click(function(){
+  $('.big_video img').click(function() {
     sqmObj[4].call()
-    window.open(video_url[video_index]);
+    // window.open(video_url[video_index]);
+    layer.open({
+      type: 1,
+      title: false,
+      closeBtn: 1,
+      area: ['7rem','5.6rem'],
+      skin: 'layui-layer-nobg', //没有背景色
+      shadeClose: false,
+      content: video_url[video_index]
+    });
   })
-  $('.play').click(function(){
+  $('.play').click(function() {
     sqmObj[4].call()
-    window.open(video_url[video_index]);
+    // window.open(video_url[video_index]);
+    layer.open({
+      type: 1,
+      title: false,
+      closeBtn: 1,
+      area: ['7rem','5.6rem'],
+      skin: 'layui-layer-nobg', //没有背景色
+      shadeClose: false,
+      content: video_url[video_index]
+    });
   })
   $("#checkMsg").click(function(){
     layer.open({
@@ -166,6 +233,7 @@ $(document).ready(function () {
           layer.alert('发送短信成功');
         }
         if(data.status=='success'){
+          localStorage.setItem('vcode',data.vcode);
           var count_down = 60;
            _this.hide().next().show();
           var t = setInterval(function(){
@@ -186,7 +254,11 @@ $(document).ready(function () {
   //提交留资
   $(".submit").click(function () {
     var type = $(this).index();     //中奖类型0是下面那个1是上面那个
-    sqmObj['1a'].call();
+    if(type==1){
+      _smq.push(['custom','17-baojun','baojun730-millionPC-funds-submit']);
+    }else{
+      _smq.push(['custom','17-baojun','baojun730-millionPC-freetax-submit']);
+    }
     var name     = $(this).parent().parent().find('.name').val();
     var tel      = $(this).parent().parent().find('.phone').val();
     var vcode    = $(this).parent().parent().find('.vcode').val();
@@ -223,11 +295,21 @@ $(document).ready(function () {
       layer.alert("请选择经销商");
       return false;
     }
+    function verifyVcode(vcode){
+      if(vcode!=localStorage.vcode){
+        return false
+      }else{
+        return true
+      }
+    }
     //验证验证码
-    $.get(Config.url+'sms_verify.php',{mobile:tel,sms_code:vcode},function(data){
-      console.log('验证短信验证码返回',data)
-      if(data.status=='success'){
-        addInfo(name, tel, province, city, dealer)
+    // $.get(Config.url+'sms_verify.php',{mobile:tel,sms_code:vcode},function(data){
+    //   console.log('验证短信验证码返回',data)
+
+    // },'json')
+    if(verifyVcode(vcode)){
+      localStorage.vcode = "";
+        addInfo(name, tel, province, city, dealer,type)
         if(type==1){
           $.get(Config.url+'reward.php',{mobile:tel,type:1},function(res){
             console.log('是否获奖接口返回',res)
@@ -253,12 +335,12 @@ $(document).ready(function () {
           layer.alert('请点击幸运饼干抽奖')
         }
       }else{
-        layer.alert('验证码验证失败')
+        layer.alert('请输入正确的验证码')
       }
-    },'json')
   })
   //点击饼干
   $('#part_4 .cookie').click(function(){
+    sqmObj['cookie'].call();
     var tel = $('#part_4 .phone').val();
     var name = $('#part_4 .name').val();
     $('#popup_cookie_win .name').val(name);
@@ -285,6 +367,7 @@ $(document).ready(function () {
   })
   //点击置换补贴基金，6000的那个
   $('.submit_subsidy').click(function(){
+    sqmObj['freetax'].call();
     var id_card  = $(this).parent().find('.id_number').val();
     var mobile   = $(this).parent().find('.phone').val();
     var name     = $(this).parent().find('.name').val();
@@ -301,6 +384,7 @@ $(document).ready(function () {
   })
   //点击提交购置税,每天10个的那个
   $('.submit_tax').click(function(){
+    sqmObj['get_cookie'].call();
     var id_card  = $(this).parent().find('.id_number').val();
     var mobile   = $(this).parent().find('.phone').val();
     var name     = $(this).parent().find('.name').val();
@@ -317,6 +401,11 @@ $(document).ready(function () {
   })
   //信息入库
   function saveUser(mobile,name,id_card,province,city,dealer,prize){
+    if(prize==2){
+      sqmObj["id1"].call();
+    }else{
+      sqmObj["id2"].call();
+    }
     $.get(Config.url+'baojun730_tax.php',{
       mobile  : mobile,
       name    : name,
@@ -358,8 +447,8 @@ $(document).ready(function () {
       }
     }
   }
-
-  function addInfo(_name, _tel, _province, _city, _dealer) {
+  //type=0下面，1上面
+  function addInfo(_name, _tel, _province, _city, _dealer,type) {
     clickFlag = false;
     $.ajax({
       url: "http://www.sgmw.com.cn/ashx/reservation_json.aspx",
@@ -388,7 +477,11 @@ $(document).ready(function () {
           // layer.alert("预约成功");
           _tel = _tel.substring(0, 3) + '****' + _tel.substring(7, 11)
           localStorage.submit_flag = true;
-          sqmObj["1b"](_name, _tel, _province, _city, _dealer);
+          if(type==1){
+            sqmObj["1b"](_name, _tel, _province, _city, _dealer);
+          }else{
+            sqmObj["1c"](_name, _tel, _province, _city, _dealer);
+          }
         } else if (wr == 2) {
           // layer.alert('您已预约成功,');
         } else {
@@ -428,7 +521,7 @@ function lanmenAddUser(name,phone,provid,cityid,dealer,idcardnum,prize){
     cityid:cityid,
     dealer:dealer,
     idcardnum:idcardnum,
-    prize,prize,
+    prize:prize,
   },function(data){
     console.log('核销接口返回',data);
   },'json')

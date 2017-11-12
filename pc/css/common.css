@@ -178,9 +178,58 @@ body .pc.container .context .content{
 }
 #part_5 {
     width:100%;
-    background:url(../images/part_5_bg.jpg) center no-repeat;
-    height:708px;
+    background:url(../images/bg5.png) center no-repeat;
+    /* height:708px; */
+    padding: 40px 0;
 }
+.partBox_5 {
+    text-align: center;
+}
+.pc>img{
+    width: 100%;
+}
+.pc{
+    width: 545px;
+    display: inline-block;
+}
+.mpH{
+    width: 375px;
+    margin-left: 20px;
+    display: inline-block;
+    color: #e5e5e5;
+    font-size: 18px;
+    text-align: left;
+}
+.mpH h1{
+    font-size: 35px;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.mpH p{
+    text-align: justify;
+}
+.mpH a{
+    display: block;
+    text-align: right;
+    color: #e5e5e5;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.partBox{
+    margin-top: 40px; 
+}
+.pc2{
+    width: 520px;
+}
+.mpH2{
+    width: 380px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+
+
 #part_5 .descContent{
     width:100%;
 }
