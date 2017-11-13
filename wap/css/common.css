@@ -89,7 +89,7 @@
     margin:0 auto;
     padding-top: 0.55rem;
 }
-
+.layui-layer{box-shadow: none;}
 
 
 #part_1{
@@ -658,16 +658,27 @@
     background-size:100%;
     overflow:hidden;
 }
-#popup_cookie_win .content>*{
+#popup_cookie_win input::-webkit-input-placeholder{
+    color:#000;
+}
+#popup_cookie_win input:-moz-placeholder{
+    color:#000;
+}
+#popup_cookie_win input::-moz-placeholder{
+    color:#000;
+}
+#popup_cookie_win input:-ms-input-placeholder{
+    color:#000;
+}
+#popup_cookie_win .content>*:not(span){
     display:block;
-    width: 5rem;
-    height: .6rem;
+    width: 4rem;
+    height: .5rem;
     border-radius: 0.05rem;
 }
 #popup_cookie_win .content{
-    width: 3.30rem;
     height: 2.21rem;
-    margin: 2.52rem 0 0 1rem;
+    margin: 2.92rem 0 0 0.2rem;
 }
 #popup_cookie_win input{
     background:#fff;
@@ -675,15 +686,23 @@
     font-size:.16rem;color:#000;
     margin:0 auto .07rem;
 }
+#popup_cookie_win .content span{
+  position: absolute;
+  right: 1.5rem;
+  top: 4.13rem;
+  font-size: .16rem;
+  color: #e9472d;
+}
 #popup_cookie_win .btn{
-    text-align:center;
-    color:#fff;
-    line-height:.56rem;
-    font-weight:bold;
-    font-size:.2rem;
-    background:#e9472d;
-    margin-top:.3rem;
-    cursor:pointer;
+    text-align: center;
+    color: #fff;
+    line-height: .46rem;
+    font-weight: bold;
+    font-size: .2rem;
+    background: #e9472d;
+    margin-top: .3rem;
+    cursor: pointer;
+    margin-left: 1.4rem;
 }
 #popup_cookie_win .close{
     width: .45rem;
@@ -699,6 +718,18 @@
     background-size:100%;
     overflow:hidden;
 }
+#popup_win input::-webkit-input-placeholder{
+    color:#fff;
+}
+#popup_win input:-moz-placeholder{
+    color:#fff;
+}
+#popup_win input::-moz-placeholder{
+    color:#fff;
+}
+#popup_win input:-ms-input-placeholder{
+    color:#fff;
+}
 #popup_win .content{
     width: 5rem;
     height: 3rem;
@@ -712,6 +743,14 @@
     padding-left:.34rem;
     font-size:.20rem;
     margin-bottom:.12rem;
+}
+#popup_win .content span{
+  position: absolute;
+  right: .78rem;
+  /* line-height: 60px; */
+  font-size: 0.2rem;
+  color: #fdd22b;
+  top: 5.6rem;
 }
 #popup_win .content .btn{
     width:4.72rem;height:.64rem;line-height:.64rem;

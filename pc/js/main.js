@@ -227,9 +227,14 @@ $(function() {
       layer.alert("请输入正确的手机号码");
       return false;
     }
-    $.get(Config.url+'sms_send.php',
-      {mobile:tel},function(data){
-
+    var key       = 'baojun730taXfrEe';
+    var timestamp = new Date().getTime().toString().substring(0,10);
+    var sign      = md5(tel+timestamp+key);
+    $.get(Config.url+'sms_send.php',{
+        mobile    : tel,
+        timestamp : timestamp,
+        sign      : sign
+      },function(data){
         console.log('发送验证码返回',data);
         if(Config.debug){
           layer.alert('验证码为:'+data.vcode);
@@ -315,24 +320,18 @@ $(function() {
       localStorage.vcode = "";
         addInfo(name, tel, province, city, dealer,type)
         if(type==1){
-          $.get(Config.url+'reward.php',{mobile:tel,type:1},function(res){
-            console.log('是否获奖接口返回',res)
-            if(res.status=='success'){
-              $('#popup_win .name').val(name);
-              $('#popup_win .phone').val(tel);
-              layer.open({
-                type: 1,
-                title: false,
-                closeBtn: 0,
-                area: ['579px','844px'],
-                skin: 'layui-layer-nobg', //没有背景色
-                shadeClose: false,
-                content: $('#popup_win')
-              });
-            }else{
-              layer.alert(res.msg)
-            }
-          },'json')
+          //原本判断中奖接口
+          $('#popup_win .name').val(name);
+          $('#popup_win .phone').val(tel);
+          layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['579px','844px'],
+            skin: 'layui-layer-nobg', //没有背景色
+            shadeClose: false,
+            content: $('#popup_win')
+          });
         }else{
           has_add_info = true;
           $('#part_3 .cookie').addClass('shrink');
@@ -350,21 +349,15 @@ $(function() {
     $('#popup_cookie_win .name').val(name);
     $('#popup_cookie_win .phone').val(tel);
     if(has_add_info){
-      $.get(Config.url+'reward.php',{mobile:tel,type:2},function(data){
-        if(data.status=='success'){
-          layer.open({
-            type: 1,
-            title: false,
-            closeBtn: 0,
-            area: ['604px','583px'],
-            skin: 'layui-layer-nobg', //没有背景色
-            shadeClose: false,
-            content: $('#popup_cookie_win')
-          });
-        }else{
-          layer.alert(data.msg)
-        }
-      },'json')
+      layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        area: ['604px','583px'],
+        skin: 'layui-layer-nobg', //没有背景色
+        shadeClose: false,
+        content: $('#popup_cookie_win')
+      });
     }else{
       layer.alert('请填写资料后再进行抽奖')
     }
@@ -378,7 +371,8 @@ $(function() {
     var province = $('#part_2').find('.pro option:selected').attr('sid');
     var city     = $('#part_2').find('.city option:selected').attr('sid');
     var dealer   = $('#part_2').find('.dealer option:selected').attr('sid');
-    var prize    = 2
+    var prize    = 2;
+    var sign ;
     console.log('身份证：',id_card);
     if(validate.isId(id_card)){
       saveUser(mobile,name,id_card,province,city,dealer,prize);
@@ -405,22 +399,31 @@ $(function() {
   })
   //信息入库
   function saveUser(mobile,name,id_card,province,city,dealer,prize){
+    var reward_type;
     if(prize==2){
+      reward_type = 1;
       sqmObj["id1"].call();
     }else{
+      reward_type = 2;
       sqmObj["id2"].call();
     }
-    $.get(Config.url+'baojun730_tax.php',{
-      mobile  : mobile,
-      name    : name,
-      id_card : id_card,
+    var key       = 'baojun730receivedtaXfrEeReward';
+    var timestamp = new Date().getTime().toString().substring(0,10);
+    var sign      = md5(mobile+timestamp+reward_type+key);
+    $.get(Config.url+'reward.php',{
+      mobile    : mobile,
+      name      : name,
+      id_card   : id_card,
+      type      : reward_type,
+      sign      : sign,
+      timestamp : timestamp
     },function(data){
       if(data.status=='success'){
         layer.closeAll();
-        layer.alert('提交成功！请等待短信通知！');
         lanmenAddUser(name,mobile,province,city,dealer,id_card,prize)
+        layer.alert('恭喜您获奖了！请等待短信通知！');
       }else{
-        layer.alert('提交失败'+data.msg);
+        layer.alert(data.msg);
       }
     },'json')
   }
